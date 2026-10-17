@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>币圈日线信号 2026-10-16 08:00</title><style>
+:root{color-scheme:light dark;--bg:#fbfbfa;--card:#fff;--line:#e4e2dd;--fg:#1f1e1c;
+--dim:#7c7973;--faint:#a5a29b;--up:#12a15c;--down:#dc4d3f;--grid:#eeece7;--accent:#c25a2c;
+--accent-bg:#f6ece6;--ma20:#e0913a;--ma60:#3b82c4;--ma200:#8d6bc4;--volc:#c9c6bf;
+--bar:rgba(251,251,250,.85)}
+@media (prefers-color-scheme:dark){:root{--bg:#17161a;--card:#201f24;--line:#33313a;
+--fg:#eceaf0;--dim:#9b97a4;--faint:#6d6a77;--grid:#2b2a31;--volc:#4a4854;
+--accent:#e08050;--accent-bg:#33241d;--bar:rgba(23,22,26,.85)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px 60px}
+
+.bar{position:sticky;top:0;z-index:20;background:var(--bar);border-bottom:1px solid var(--line);
+backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.bar-in{max-width:1240px;margin:0 auto;padding:9px 20px;display:flex;align-items:center;
+gap:8px 18px;flex-wrap:wrap}
+.brand{font-size:15px;font-weight:600;white-space:nowrap}
+.brand span{color:var(--dim);font-weight:400;margin-left:6px}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+nav a{padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--card);
+color:var(--dim);text-decoration:none;font-size:13px;white-space:nowrap;transition:.15s}
+nav a:hover{color:var(--fg)}
+nav a.on{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+nav a b{font-weight:600;margin-left:5px;font-variant-numeric:tabular-nums}
+
+h1{font-size:26px;margin:26px 0 6px;letter-spacing:-.01em}
+.meta{color:var(--dim);font-size:14px;margin:0 0 16px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--dim);font-size:12px;margin:0 0 4px}
+.legend i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin-right:5px}
+h2{font-size:18px;margin:34px 0 4px;scroll-margin-top:64px}
+h2 span{color:var(--dim);font-weight:400;font-size:14px}
+.desc{color:var(--dim);font-size:13px;margin:0 0 14px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px 10px;
+min-width:0;content-visibility:auto;contain-intrinsic-size:auto 640px}
+.head{display:flex;align-items:baseline;gap:8px}
+.sym{font-size:17px;font-weight:600;letter-spacing:.01em}
+.px,.chg,.cap{font-variant-numeric:tabular-nums}
+.chg{font-size:13px}.chg.p{color:var(--up)}.chg.n{color:var(--down)}
+.cap{margin-left:auto;font-size:13px;color:var(--dim)}
+.sub{font-size:12.5px;color:var(--dim);margin-top:1px;overflow:hidden;text-overflow:ellipsis;
+white-space:nowrap}
+.sub b{font-weight:500;color:var(--fg)}
+.sub em{font-style:normal;color:var(--faint)}
+.detail{margin:8px 0 0;font-size:13px;color:var(--dim)}
+.foot{margin-top:5px;font-size:11.5px;color:var(--faint);display:flex;gap:10px;flex-wrap:wrap}
+
+.chart{display:block;margin-top:8px;overflow:visible}
+.chart .grid{stroke:var(--grid);stroke-width:1}
+.chart .axis,.chart .tag{fill:var(--dim);font-size:9px;font-family:inherit}
+.chart .tag{fill:var(--accent)}
+.chart .k path{stroke-width:1;fill:none}
+.chart .k.up path{stroke:var(--up)}.chart .k.up rect{fill:var(--up)}
+.chart .k.down path{stroke:var(--down)}.chart .k.down rect{fill:var(--down)}
+.chart .vol rect{fill:var(--volc)}
+.chart .ma{fill:none;stroke-width:1.2;opacity:.9}
+.chart .ma20{stroke:var(--ma20)}.chart .ma200{stroke:var(--ma200)}
+.chart .mark-h{stroke:var(--accent);stroke-width:1.2;stroke-dasharray:4 3}
+.chart .mark-stop{stroke:var(--down)}.chart .mark-target{stroke:var(--up)}
+.chart .tag-stop{fill:var(--down)}.chart .tag-target{fill:var(--up)}
+.chart .mark-t{stroke:var(--accent);stroke-width:1.4}
+.chart .mark-p{fill:none;stroke:var(--accent);stroke-width:1.8}
+.chart .mark-box{fill:var(--accent);fill-opacity:.07;stroke:var(--accent);stroke-width:1.1;
+stroke-dasharray:3 2}
+.tracks{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
+.track{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tname{font-size:15px;font-weight:600}
+.tsec{font-size:12px;color:var(--faint);margin-left:7px}
+.tstat{display:flex;gap:12px;flex-wrap:wrap;margin:5px 0 9px;font-size:12px;color:var(--dim);
+font-variant-numeric:tabular-nums}
+.tstat b{color:var(--up);font-weight:600}
+.lead{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+.lead td{padding:3px 0;border-top:1px solid var(--line)}
+.lead td:first-child{font-weight:600;width:58px}
+.lead .nm{color:var(--dim);font-weight:400;width:auto;overflow:hidden;text-overflow:ellipsis;
+max-width:0;white-space:nowrap}
+.lead .r{text-align:right;color:var(--up);width:56px}
+.lead .r.n{color:var(--down)}
+.lead .v{text-align:right;color:var(--ma20);width:62px;white-space:nowrap}
+.lead .h{text-align:right;color:var(--faint);width:132px;white-space:nowrap}
+footer{margin-top:44px;color:var(--dim);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+.status-line{display:flex;align-items:center;gap:9px;margin:14px 0 10px;font-size:12px;color:var(--dim);flex-wrap:wrap}
+.status-badge{border-radius:5px;padding:3px 7px;background:var(--accent-bg);color:var(--accent);font-weight:600}
+.status-badge.buy{color:var(--up);background:color-mix(in srgb,var(--up) 10%,var(--card))}
+.scan-date{margin-left:auto;font-size:11px;color:var(--dim)}
+.key-stats{margin:0;overflow-x:auto;font-size:12px;line-height:1.7}
+.stats-row{display:flex;gap:16px;white-space:nowrap}
+.stats-row+.stats-row{margin-top:2px}
+.stats-row>div{display:flex;align-items:baseline;gap:5px}
+.key-stats dt{color:var(--dim)}
+.key-stats dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.key-stats small{font-size:inherit;font-weight:400;margin-left:3px}
+.key-stats .risk dd{color:var(--down)}
+.chart-tools{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chart-legend{display:flex;gap:12px;font-size:11px;color:var(--dim)}
+.chart-legend span:before{content:'';display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:5px}
+.ema20:before{background:var(--ma20)}.ema200:before{background:var(--ma200)}
+.window-buttons{display:flex;gap:3px}
+.stock-chart button{background:var(--card);color:var(--dim);font:inherit;font-size:11px;border:1px solid var(--line);border-radius:5px;padding:4px 8px;cursor:pointer;white-space:nowrap}
+.stock-chart button:hover,.stock-chart button[aria-pressed=true]{background:var(--accent-bg);color:var(--accent);border-color:var(--accent)}
+.stock-chart button:disabled{opacity:.4;cursor:default}
+.stock-chart :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chart-probe{font-size:10px;color:var(--dim);min-height:32px;margin-top:7px;font-variant-numeric:tabular-nums}
+.interactive{cursor:grab;touch-action:pan-y;user-select:none;margin-top:0;overflow:hidden}
+.interactive.dragging{cursor:grabbing}
+.interactive .axis{font-size:12px}.interactive .ma{stroke-width:1.7}
+.chart-crosshair{stroke:var(--dim);stroke-width:1;stroke-dasharray:3 4;pointer-events:none}
+.chart-navigation{display:flex;align-items:center;gap:8px;margin-top:6px}
+.chart-slider{flex:1;min-width:40px;accent-color:var(--accent);cursor:ew-resize}
+.chart-caption{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:10px;color:var(--dim);margin-top:5px}
+.chart-levels{display:flex;gap:5px 12px;flex-wrap:wrap;font-size:11px;color:var(--accent);padding:9px 0;border-bottom:1px solid var(--line)}
+.chart-levels .level-stop{color:var(--down)}.chart-levels .level-target{color:var(--up)}
+.extra-detail{margin-top:8px;font-size:11px;color:var(--dim)}.extra-detail summary{cursor:pointer}
+.extra-detail .detail{font-size:12px;margin:6px 0}.foot{margin-top:9px}
+@media(max-width:600px){.wrap{padding:0 10px 30px}.card{padding:12px}.key-stats{font-size:11px}.stats-row{gap:10px}.chart-caption span:last-child{display:none}.cap{font-size:11px}}
+
+.sym a{color:inherit;text-decoration:none}.sym a:hover{color:var(--accent)}
+.status-badge.minor{color:var(--dim);background:var(--grid)}
+.action{margin:8px 0 2px;font-size:13.5px}.action b{color:var(--accent);font-weight:600}
+.notes{color:var(--dim);font-size:13px;margin:0 0 14px;padding-left:18px}
+</style></head>
+<body>
+<div class="bar"><div class="bar-in">
+<div class="brand">币圈日线信号<span>2026-10-16 08:00</span></div><nav><a href="#ma20" data-k="ma20">📈 站上 20 日线<b>1</b></a></nav>
+</div></div>
+<div class="wrap">
+<h1>1 个信号</h1>
+<p class="meta">币安 USDT 永续 · 日 K 按北京时间 8 点切换，只用已收盘的日 K（盘中「突破中」另看 1h 收盘）
+· BTC 日线牛市（收盘 82,195，20 日线 82,902，50 日线 80,280）</p>
+<p class="legend">
+<span><i style="background:var(--ma20)"></i>EMA20</span>
+<span><i style="background:var(--ma200)"></i>EMA200</span>
+<span><i style="background:var(--accent)"></i>信号日</span>
+<span><i style="background:var(--down)"></i>止损</span>
+<span><i style="background:var(--up)"></i>目标</span>
+<span>拖动平移 · 点击图表后滚轮缩放</span></p>
+<h2 id="ma20">📈 站上 20 日线 <span>1 个</span></h2><ul class="notes"><li>主流币跌了一段后收回 20 日线。5 年回测 31 个币：60 天没涨的（重点）792 笔、每笔赚 0.23 倍止损距离，每年都正，但胜率不到四成、每笔平均只有 +0.6%——优势小，当小仓位补充；60 天已经涨了的（次要）和随便哪天买差不多，涨得越多越差。BTC 熊市里 60 天还在跌的不报。</li><li>仓位按止损算，一笔最多亏账户 1–2%；同一天报出几个就把仓位平分。</li></ul><div class="grid"><article class="card" data-symbol="ARBUSDT"><div class="head"><span class="sym"><a href="https://www.binance.com/zh-CN/futures/ARBUSDT" target="_blank" rel="noopener">ARB</a></span><span class="px">0.19558</span><span class="cap">ARBUSDT 永续</span></div><div class="status-line"><span class="status-badge minor">次要</span><span>收回 20 日线上方：前一天收 0.18182（线下），现在 0.19558，20 日线 0.19156；次要原因：60 天已涨 +166%</span></div><p class="action">→ 现价 <b>0.19558</b> 进，不用等回调；到目标先出一半，剩下的拿到第 7 天按当时价平。</p><dl class="key-stats"><div class="stats-row"><div class="risk"><dt>止损</dt><dd>0.18128<small>(-7.3%)</small></dd></div><div class=""><dt>目标</dt><dd>0.23847<small>(+21.9%)</small></dd></div><div class=""><dt>止损口径</dt><dd>1h 收盘跌破</dd></div></div><div class="stats-row"><div class=""><dt>60 天涨跌</dt><dd>+166%</dd></div><div class=""><dt>在 20 日线下</dt><dd>3 天</dd></div></div></dl><div class="stock-chart">
+<div class="chart-tools"><div class="chart-legend"><span class="ema20">EMA20</span>
+<span class="ema200">EMA200</span></div><div class="window-buttons" role="group" aria-label="图表窗口">
+<button type="button" data-window="60">60日</button><button type="button" data-window="120">120日</button>
+<button type="button" data-window="250">250日</button><button type="button" data-window="all">全部</button>
+</div></div><div class="chart-probe" aria-label="所指交易日行情"></div>
+<svg class="chart interactive" viewBox="0 0 800 334" role="img" aria-label="日线图，可左右拖动；方向键平移，加减键缩放" tabindex="0"></svg>
+<div class="chart-navigation"><button type="button" data-pan="-1" aria-label="向前查看">←</button>
+<input class="chart-slider" type="range" aria-label="移动图表时间窗口" step="1">
+<button type="button" data-pan="1" aria-label="向后查看">→</button>
+<button type="button" data-latest>回到最新</button></div>
+<div class="chart-caption"><span class="chart-dates"></span><span>拖动平移 · 滚轮缩放</span></div>
+<script type="application/json" class="chart-data">{"rows": [["2026-03-01", 0.0996, 0.1052, 0.0957, 0.0995, 641298856.4, null, null], ["2026-03-02", 0.0995, 0.1087, 0.0984, 0.1018, 649217445.2, null, null], ["2026-03-03", 0.1019, 0.1045, 0.0987, 0.1026, 510563597.8, null, null], ["2026-03-04", 0.1026, 0.1074, 0.1009, 0.1047, 586974192.2, null, null], ["2026-03-05", 0.1047, 0.106, 0.1005, 0.1029, 465183642.5, null, null], ["2026-03-06", 0.1028, 0.1051, 0.0978, 0.0999, 390478208.2, null, null], ["2026-03-07", 0.1, 0.1007, 0.0957, 0.0968, 238455072.0, null, null], ["2026-03-08", 0.0967, 0.0973, 0.0933, 0.0944, 376521885.1, null, null], ["2026-03-09", 0.0944, 0.1011, 0.0941, 0.0975, 466113937.0, null, null], ["2026-03-10", 0.0974, 0.1022, 0.0971, 0.0983, 419537848.6, null, null], ["2026-03-11", 0.0983, 0.1034, 0.0969, 0.1, 378685482.6, null, null], ["2026-03-12", 0.1, 0.1015, 0.0973, 0.1009, 376800199.7, null, null], ["2026-03-13", 0.1009, 0.1073, 0.1006, 0.1026, 472333287.2, null, null], ["2026-03-14", 0.1026, 0.1035, 0.0993, 0.1009, 224604171.3, null, null], ["2026-03-15", 0.1009, 0.1046, 0.1001, 0.1039, 304178023.0, null, null], ["2026-03-16", 0.1039, 0.1115, 0.1032, 0.1103, 567019583.2, null, null], ["2026-03-17", 0.1104, 0.1112, 0.1067, 0.1079, 364247744.0, null, null], ["2026-03-18", 0.1079, 0.1093, 0.1001, 0.1028, 377705213.3, null, null], ["2026-03-19", 0.1029, 0.1038, 0.0976, 0.0992, 310100162.6, null, null], ["2026-03-20", 0.0993, 0.1015, 0.0984, 0.0998, 270092778.7, 0.10154458573639438, null], ["2026-03-21", 0.0998, 0.1007, 0.0956, 0.0963, 190263416.9, 0.1010451013805473, null], ["2026-03-22", 0.0962, 0.0972, 0.091, 0.0925, 417157514.4, 0.10023128220144756, null], ["2026-03-23", 0.0924, 0.0977, 0.0912, 0.0976, 687082501.9, 0.0999806838965478, null], ["2026-03-24", 0.0976, 0.0985, 0.0946, 0.0975, 503957007.5, 0.09974442828735276, null], ["2026-03-25", 0.0976, 0.1, 0.0968, 0.0987, 313122899.1, 0.0996449589266525, null], ["2026-03-26", 0.0987, 0.0993, 0.0924, 0.0938, 394373032.0, 0.09908829617173322, null], ["2026-03-27", 0.0937, 0.0951, 0.0893, 0.0899, 365966502.7, 0.09821322034585386, null], ["2026-03-28", 0.0899, 0.0924, 0.0885, 0.0898, 254153193.7, 0.09741196126529635, null], ["2026-03-29", 0.0897, 0.0908, 0.0855, 0.0883, 318366550.0, 0.09654415543050622, null], ["2026-03-30", 0.0883, 0.0937, 0.0881, 0.0911, 465036969.4, 0.09602566443712468, null], ["2026-03-31", 0.0911, 0.094, 0.0906, 0.0929, 371502580.2, 0.09572798210977947, null], ["2026-04-01", 0.0929, 0.0969, 0.0921, 0.0944, 374585298.8, 0.0956015076231338, null], ["2026-04-02", 0.0943, 0.0955, 0.0895, 0.0907, 422754237.5, 0.09513469737331152, null], ["2026-04-03", 0.0908, 0.0948, 0.0906, 0.0923, 388220632.0, 0.0948647261949009, null], ["2026-04-04", 0.0922, 0.0938, 0.0913, 0.0926, 240212294.0, 0.09464903798586272, null], ["2026-04-05", 0.0927, 0.0947, 0.0896, 0.0942, 265442954.3, 0.0946062724633996, null], ["2026-04-06", 0.0942, 0.0989, 0.093, 0.0936, 428045954.3, 0.09451043699069488, null], ["2026-04-07", 0.0935, 0.103, 0.0925, 0.102, 552918642.3, 0.09522372870586679, null], ["2026-04-08", 0.102, 0.1065, 0.0996, 0.1054, 509878700.7, 0.09619289740054614, null], ["2026-04-09", 0.1055, 0.1102, 0.1004, 0.1078, 580285774.2, 0.09729833574335127, null], ["2026-04-10", 0.1079, 0.1166, 0.1071, 0.1165, 829158650.5, 0.09912706567255591, null], ["2026-04-11", 0.1165, 0.1226, 0.1132, 0.1156, 792238479.9, 0.10069591656088392, null], ["2026-04-12", 0.1155, 0.1161, 0.109, 0.1109, 328268901.3, 0.10166773403127592, null], ["2026-04-13", 0.1108, 0.1138, 0.1097, 0.1134, 285344217.1, 0.10278509269496393, null], ["2026-04-14", 0.1135, 0.1137, 0.1089, 0.1101, 311704001.5, 0.1034817505335388, null], ["2026-04-15", 0.1101, 0.1175, 0.11, 0.1149, 395808297.6, 0.10456920286367796, null], ["2026-04-16", 0.1149, 0.1333, 0.1141, 0.1289, 652761012.0, 0.10688642163856578, null], ["2026-04-17", 0.1288, 0.1367, 0.126, 0.1313, 621828624.5, 0.10921152433965475, null], ["2026-04-18", 0.1312, 0.1343, 0.1257, 0.129, 310404586.8, 0.11109614106921144, null], ["2026-04-19", 0.1291, 0.1292, 0.1211, 0.1215, 291378584.3, 0.11208698477690558, null], ["2026-04-20", 0.1216, 0.1294, 0.1212, 0.1271, 335530802.6, 0.11351679575053363, null], ["2026-04-21", 0.1271, 0.1289, 0.1226, 0.1252, 285817726.6, 0.11462948186953043, null], ["2026-04-22", 0.1252, 0.1338, 0.1239, 0.1284, 332136030.5, 0.115940959786718, null], ["2026-04-23", 0.1285, 0.1293, 0.1233, 0.1284, 343881964.5, 0.11712753504512581, null], ["2026-04-24", 0.1284, 0.1324, 0.1273, 0.1286, 277727627.4, 0.11822015075511383, null], ["2026-04-25", 0.1286, 0.133, 0.1272, 0.1292, 218120129.1, 0.11926585068319823, null], ["2026-04-26", 0.1292, 0.1327, 0.1277, 0.1294, 208141916.5, 0.12023100776098887, null], ["2026-04-27", 0.1293, 0.1329, 0.1232, 0.1265, 277354881.2, 0.12082805464089469, null], ["2026-04-28", 0.1266, 0.1275, 0.1229, 0.1243, 218111372.5, 0.12115871610366662, null], ["2026-04-29", 0.1243, 0.1328, 0.1205, 0.1253, 368592433.0, 0.12155312409379361, null], ["2026-04-30", 0.1253, 0.129, 0.1233, 0.1237, 244771006.3, 0.12175758846581326, null], ["2026-05-01", 0.1236, 0.1274, 0.1226, 0.1235, 239365228.9, 0.1219235324214501, null], ["2026-05-02", 0.1235, 0.1245, 0.1215, 0.1226, 166868031.9, 0.12198795790512151, null], ["2026-05-03", 0.1226, 0.1229, 0.1166, 0.1172, 300579465.8, 0.12153196191415756, null], ["2026-05-04", 0.1172, 0.1205, 0.1137, 0.1163, 436505943.7, 0.12103367982709494, null], ["2026-05-05", 0.1163, 0.1215, 0.116, 0.1197, 223456004.7, 0.12090666270070495, null], ["2026-05-06", 0.1197, 0.1292, 0.1182, 0.128, 396490926.5, 0.12158221863397115, null], ["2026-05-07", 0.128, 0.1304, 0.1227, 0.1266, 430127158.5, 0.12206010257359294, null], ["2026-05-08", 0.1266, 0.1476, 0.1264, 0.1425, 727037813.9, 0.124006759471346, null], ["2026-05-09", 0.1425, 0.1495, 0.1384, 0.1423, 474144713.8, 0.12574897285502734, null], ["2026-05-10", 0.1424, 0.146, 0.1386, 0.1439, 346692505.8, 0.1274776421069295, null], ["2026-05-11", 0.1439, 0.1448, 0.1395, 0.1409, 210489283.6, 0.12875596190626953, null], ["2026-05-12", 0.1409, 0.142, 0.134, 0.1362, 233882668.7, 0.12946491791519624, null], ["2026-05-13", 0.1362, 0.1433, 0.1308, 0.1319, 263209432.7, 0.12969683049470135, null], ["2026-05-14", 0.1319, 0.1358, 0.1283, 0.1313, 247248540.0, 0.1298495133047298, null], ["2026-05-15", 0.1313, 0.1326, 0.1223, 0.1247, 263700805.4, 0.1293590834661841, null], ["2026-05-16", 0.1247, 0.125, 0.1177, 0.1194, 172465188.7, 0.12841059932654753, null], ["2026-05-17", 0.1194, 0.1224, 0.1125, 0.1164, 280376467.0, 0.1272667327240192, null], ["2026-05-18", 0.1164, 0.1179, 0.1139, 0.1176, 284486396.1, 0.12634609151220785, null], ["2026-05-19", 0.1176, 0.1187, 0.1131, 0.1135, 173692400.7, 0.12512265422533092, null], ["2026-05-20", 0.1135, 0.1146, 0.1096, 0.1099, 323035505.0, 0.12367287763244227, null], ["2026-05-21", 0.1099, 0.1158, 0.1083, 0.1128, 445582873.0, 0.12263736547697157, null], ["2026-05-22", 0.1128, 0.1157, 0.1079, 0.1086, 395649906.8, 0.1213004735267838, null], ["2026-05-23", 0.1086, 0.1122, 0.1028, 0.1094, 370941991.5, 0.12016709509566154, null], ["2026-05-24", 0.1094, 0.11, 0.1034, 0.1056, 246232346.9, 0.11877975270559853, null], ["2026-05-25", 0.1056, 0.111, 0.1045, 0.1084, 258797561.2, 0.11779120482887485, null], ["2026-05-26", 0.1084, 0.113, 0.1063, 0.1086, 403880902.9, 0.11691585198802963, null], ["2026-05-27", 0.1087, 0.1111, 0.1056, 0.1072, 311719601.2, 0.11599053275107443, null], ["2026-05-28", 0.1071, 0.1075, 0.1005, 0.1044, 367648193.0, 0.11488667248906734, null], ["2026-05-29", 0.1043, 0.1066, 0.1004, 0.103, 357194329.6, 0.1137546084424895, null], ["2026-05-30", 0.1031, 0.1069, 0.1028, 0.1032, 180678677.2, 0.11274940763844288, null], ["2026-05-31", 0.1033, 0.1051, 0.1001, 0.1035, 240574872.9, 0.11186851167287688, null], ["2026-06-01", 0.1035, 0.1043, 0.0982, 0.1024, 434283555.2, 0.11096674865641241, null], ["2026-06-02", 0.1024, 0.1027, 0.0908, 0.0928, 596231644.7, 0.10923658211770647, null], ["2026-06-03", 0.0928, 0.098, 0.0892, 0.0928, 583578776.8, 0.10767119334459156, null], ["2026-06-04", 0.0928, 0.094, 0.0851, 0.0893, 580528259.2, 0.10592155588320189, null], ["2026-06-05", 0.0892, 0.0898, 0.077, 0.0803, 931240194.9, 0.10348140770384932, null], ["2026-06-06", 0.0802, 0.0812, 0.0739, 0.0798, 437667273.5, 0.10122603554157796, null], ["2026-06-07", 0.0799, 0.0853, 0.0792, 0.083, 449230313.3, 0.09949022263285624, null], ["2026-06-08", 0.083, 0.0846, 0.0808, 0.082, 336461312.4, 0.09782448714401279, null], ["2026-06-09", 0.082, 0.0823, 0.0777, 0.0803, 393637324.2, 0.09615548836839252, null], ["2026-06-10", 0.0803, 0.08173, 0.07552, 0.07746, 594936899.6, 0.09437496566664086, null], ["2026-06-11", 0.07747, 0.08659, 0.07741, 0.08352, 871046285.9, 0.09334115941267507, null], ["2026-06-12", 0.08353, 0.08548, 0.08182, 0.08391, 318912531.3, 0.09244295375432506, null], ["2026-06-13", 0.08391, 0.0869, 0.08371, 0.08521, 181836862.0, 0.09175410101581791, null], ["2026-06-14", 0.08521, 0.08608, 0.08154, 0.08578, 291890100.5, 0.09118513901431144, null], ["2026-06-15", 0.08579, 0.08989, 0.08485, 0.08618, 356477615.7, 0.09070845910818653, null], ["2026-06-16", 0.08619, 0.08801, 0.08354, 0.0856, 273450705.3, 0.09022193919312115, null], ["2026-06-17", 0.0856, 0.08984, 0.08385, 0.08563, 383830356.1, 0.08978461165091912, null], ["2026-06-18", 0.08564, 0.08777, 0.08117, 0.08527, 342681324.3, 0.08935464863654588, null], ["2026-06-19", 0.08526, 0.08662, 0.08203, 0.08387, 263368381.6, 0.08883230114735104, null], ["2026-06-20", 0.08387, 0.0851, 0.08174, 0.08457, 198543678.4, 0.08842636770474618, null], ["2026-06-21", 0.08458, 0.0848, 0.08151, 0.08179, 183117344.0, 0.08779433268524654, null], ["2026-06-22", 0.08177, 0.08694, 0.08173, 0.08318, 292030704.7, 0.08735487242950878, null], ["2026-06-23", 0.08317, 0.08338, 0.0765, 0.07904, 372807487.2, 0.0865629798171746, null], ["2026-06-24", 0.07904, 0.07939, 0.07264, 0.07603, 392040919.3, 0.0855598388822056, null], ["2026-06-25", 0.07603, 0.07743, 0.0704, 0.07322, 346983937.7, 0.08438461613151935, null], ["2026-06-26", 0.07323, 0.07502, 0.07045, 0.07432, 365684620.4, 0.08342608126185083, null], ["2026-06-27", 0.07431, 0.07586, 0.0727, 0.07339, 204012194.8, 0.08247026399881742, null], ["2026-06-28", 0.07339, 0.07458, 0.0723, 0.07386, 148950532.6, 0.08165023885607291, null], ["2026-06-29", 0.07386, 0.07832, 0.07297, 0.07676, 402832503.5, 0.0811845018221612, null], ["2026-06-30", 0.07676, 0.07689, 0.07347, 0.07605, 241741400.0, 0.08069550164862205, null], ["2026-07-01", 0.07606, 0.0793, 0.07482, 0.07667, 318912769.2, 0.08031212053922947, null], ["2026-07-02", 0.07667, 0.07958, 0.07629, 0.07724, 322878956.6, 0.08001953763073143, null], ["2026-07-03", 0.07724, 0.08154, 0.07654, 0.081, 257393929.3, 0.08011291499923319, null], ["2026-07-04", 0.08099, 0.08211, 0.07901, 0.08031, 206335027.6, 0.08013168499930622, null], ["2026-07-05", 0.08031, 0.08136, 0.07741, 0.0805, 198906996.7, 0.08016676261841992, null], ["2026-07-06", 0.0805, 0.08186, 0.07598, 0.08028, 263686961.8, 0.08017754713095135, null], ["2026-07-07", 0.08027, 0.08065, 0.07639, 0.07699, 262998691.6, 0.07987397121371789, null], ["2026-07-08", 0.07699, 0.07849, 0.07504, 0.07686, 357336311.1, 0.07958692633622096, null], ["2026-07-09", 0.07686, 0.09135, 0.07657, 0.08751, 1544659157.8, 0.08034150478039039, null], ["2026-07-10", 0.08752, 0.096, 0.08662, 0.09287, 1169478902.4, 0.08153469480130558, null], ["2026-07-11", 0.09287, 0.1, 0.08964, 0.09495, 852952713.7, 0.08281234291546695, null], ["2026-07-12", 0.09494, 0.10133, 0.09218, 0.09318, 731138636.5, 0.08379973882827962, null], ["2026-07-13", 0.09317, 0.09582, 0.08804, 0.0903, 647939269.3, 0.08441881132082442, null], ["2026-07-14", 0.0903, 0.09311, 0.0887, 0.09219, 396730870.9, 0.08515892452836495, null], ["2026-07-15", 0.09219, 0.09375, 0.0868, 0.08846, 398011335.3, 0.08547331266852067, null], ["2026-07-16", 0.08845, 0.09099, 0.08527, 0.08897, 324832255.3, 0.08580633050961393, null], ["2026-07-17", 0.08896, 0.09143, 0.08707, 0.09058, 452750487.1, 0.08626096569917452, null], ["2026-07-18", 0.09059, 0.09273, 0.08777, 0.08827, 269980129.2, 0.08645230229925313, null], ["2026-07-19", 0.08827, 0.09022, 0.08745, 0.08902, 202972728.8, 0.0866968449374195, null], ["2026-07-20", 0.08902, 0.09152, 0.08516, 0.09035, 339581120.6, 0.08704476446718908, null], ["2026-07-21", 0.09034, 0.09184, 0.08805, 0.08891, 222049605.5, 0.0872224059465044, null], ["2026-07-22", 0.08892, 0.09199, 0.08815, 0.09012, 438336566.9, 0.08749836728493256, null], ["2026-07-23", 0.09012, 0.09128, 0.08548, 0.08607, 264801990.4, 0.08736233230541517, null], ["2026-07-24", 0.08608, 0.087, 0.08278, 0.08301, 264651309.1, 0.0869478244668042, null], ["2026-07-25", 0.08301, 0.08348, 0.08171, 0.08249, 175334756.6, 0.08652326975567999, null], ["2026-07-26", 0.08249, 0.08369, 0.08191, 0.08319, 207310076.7, 0.08620581549323428, null], ["2026-07-27", 0.08319, 0.0832, 0.07641, 0.07703, 417939311.3, 0.08533192830340244, null], ["2026-07-28", 0.07703, 0.07975, 0.07665, 0.07899, 281644733.9, 0.08472793513164983, null], ["2026-07-29", 0.07899, 0.07961, 0.07672, 0.07916, 285637092.1, 0.08419765559530223, null], ["2026-07-30", 0.07915, 0.08014, 0.07734, 0.07742, 213876160.2, 0.08355216458622583, null], ["2026-07-31", 0.07741, 0.07839, 0.07547, 0.07822, 238151675.2, 0.08304433938753765, null], ["2026-08-01", 0.07823, 0.07973, 0.07695, 0.07892, 224482069.1, 0.0826515451601531, null], ["2026-08-02", 0.07891, 0.08226, 0.07883, 0.0816, 232248201.8, 0.08255139800204328, null], ["2026-08-03", 0.0816, 0.08296, 0.0798, 0.08264, 229192516.4, 0.08255983628756297, null], ["2026-08-04", 0.08264, 0.08405, 0.08091, 0.08183, 242115405.4, 0.08249032806969983, null], ["2026-08-05", 0.08183, 0.08191, 0.08004, 0.0804, 140777972.0, 0.08229124920591889, null], ["2026-08-06", 0.0804, 0.08077, 0.0771, 0.07831, 272518807.7, 0.08191208261487899, null], ["2026-08-07", 0.07832, 0.07935, 0.07726, 0.07911, 206652751.7, 0.08164521760393814, null], ["2026-08-08", 0.07912, 0.08003, 0.07766, 0.07822, 128235293.3, 0.08131900640356308, null], ["2026-08-09", 0.07822, 0.08069, 0.0766, 0.07771, 216099329.4, 0.08097529150798564, null], ["2026-08-10", 0.07771, 0.0809, 0.07742, 0.08001, 256426925.0, 0.08088335898341559, null], ["2026-08-11", 0.08001, 0.08151, 0.07716, 0.08024, 275315936.0, 0.08082208669928077, null], ["2026-08-12", 0.08023, 0.08087, 0.07346, 0.07401, 311949013.6, 0.08017331653744451, null], ["2026-08-13", 0.07402, 0.07665, 0.0736, 0.07524, 257402366.9, 0.0797034768672117, null], ["2026-08-14", 0.07523, 0.07584, 0.07271, 0.0745, 189055402.9, 0.07920790764176297, null], ["2026-08-15", 0.07449, 0.07547, 0.07262, 0.07273, 135322261.8, 0.07859096405683316, null], ["2026-08-16", 0.07274, 0.07506, 0.0721, 0.07351, 178885054.0, 0.07810706271808715, null], ["2026-08-17", 0.07351, 0.07588, 0.07335, 0.07513, 181291400.1, 0.07782353293541218, null], ["2026-08-18", 0.07512, 0.07599, 0.07347, 0.07524, 223069440.3, 0.07757748217965864, null], ["2026-08-19", 0.07524, 0.0906, 0.07497, 0.08948, 632450035.4, 0.07871105530540544, null], ["2026-08-20", 0.08949, 0.09131, 0.08676, 0.09088, 542184166.9, 0.07987000241917636, null], ["2026-08-21", 0.09088, 0.10038, 0.09044, 0.09818, 568373741.5, 0.08161381171258814, null], ["2026-08-22", 0.09818, 0.10969, 0.09, 0.09895, 599871141.0, 0.08326487726377022, null], ["2026-08-23", 0.09895, 0.10383, 0.09416, 0.10135, 324878790.1, 0.08498726990531591, null], ["2026-08-24", 0.10135, 0.10135, 0.09555, 0.0969, 331968634.0, 0.08612181562861916, null], ["2026-08-25", 0.09689, 0.10007, 0.09077, 0.09215, 267857315.3, 0.08669592842589352, null], ["2026-08-26", 0.09214, 0.09415, 0.08801, 0.09276, 262556602.8, 0.0872734590519989, null], ["2026-08-27", 0.09277, 0.09341, 0.08952, 0.09188, 254343279.5, 0.08771217723752282, null], ["2026-08-28", 0.09189, 0.09438, 0.08621, 0.08776, 271068092.0, 0.08771673178633017, null], ["2026-08-29", 0.08776, 0.08896, 0.08676, 0.08765, 103564972.5, 0.08771037637810826, null], ["2026-08-30", 0.08765, 0.09094, 0.08295, 0.08417, 321543952.4, 0.08737319767543128, null], ["2026-08-31", 0.08418, 0.10992, 0.08377, 0.10938, 1315881088.3, 0.08946908361110449, null], ["2026-09-01", 0.10937, 0.1201, 0.10422, 0.11039, 4321622666.1, 0.09146155183861834, null], ["2026-09-02", 0.1104, 0.12793, 0.10568, 0.12401, 2588316795.8, 0.09456140404446421, null], ["2026-09-03", 0.12402, 0.14493, 0.12218, 0.14087, 2918232854.4, 0.09897174651642, null], ["2026-09-04", 0.14087, 0.14677, 0.12808, 0.13176, 1590214801.2, 0.10209443732438, null], ["2026-09-05", 0.13176, 0.18332, 0.1288, 0.17713, 2002111474.5, 0.10924068138872477, null], ["2026-09-06", 0.17714, 0.20683, 0.17714, 0.18918, 4456635892.1, 0.11685394982789384, null], ["2026-09-07", 0.18919, 0.19209, 0.16004, 0.1694, 2559322769.4, 0.12185833555857062, null], ["2026-09-08", 0.1694, 0.17867, 0.16384, 0.16489, 1329361507.5, 0.12595658931489723, null], ["2026-09-09", 0.1649, 0.1746, 0.14844, 0.14938, 1303323442.0, 0.12818739033252607, null], ["2026-09-10", 0.14938, 0.15369, 0.1395, 0.13984, 923159551.4, 0.1292971626818093, null], ["2026-09-11", 0.13984, 0.15185, 0.13724, 0.13944, 836290558.6, 0.13026314718830365, null], ["2026-09-12", 0.13944, 0.1462, 0.13844, 0.14041, 415670610.9, 0.1312295141227509, null], ["2026-09-13", 0.1404, 0.14326, 0.13227, 0.13294, 502981618.8, 0.13139241753963177, null], ["2026-09-14", 0.13296, 0.14215, 0.13277, 0.13362, 661183887.6, 0.13160456825014302, null], ["2026-09-15", 0.13362, 0.1562, 0.13121, 0.15163, 1684558578.8, 0.13351175222631986, null], ["2026-09-16", 0.15162, 0.17384, 0.1481, 0.16801, 2467324280.2, 0.136797299633337, 0.10157511061956355], ["2026-09-17", 0.16801, 0.18457, 0.16089, 0.17717, 1341478672.8, 0.14064231871587635, 0.10232729857359775], ["2026-09-18", 0.17717, 0.22949, 0.17568, 0.22117, 2684474805.5, 0.1483116216953167, 0.10350981301565151], ["2026-09-19", 0.22116, 0.23087, 0.2027, 0.20602, 894948909.8, 0.15380765772433416, 0.1045298148761923], ["2026-09-20", 0.20601, 0.22501, 0.19607, 0.21764, 1278939007.1, 0.15988692841725471, 0.10565528935503617], ["2026-09-21", 0.21764, 0.24787, 0.20952, 0.22561, 1377939708.7, 0.16614626856799236, 0.10684886856543382], ["2026-09-22", 0.22561, 0.23597, 0.21104, 0.2352, 917020179.1, 0.17272281441865975, 0.10812599425134992], ["2026-09-23", 0.2352, 0.25569, 0.21446, 0.21594, 1442477791.1, 0.17683873685497786, 0.10919877042795341], ["2026-09-24", 0.21593, 0.22357, 0.21022, 0.21636, 807562646.4, 0.1806026666783133, 0.11026505131921756], ["2026-09-25", 0.21637, 0.23109, 0.21342, 0.22656, 781569365.3, 0.18497955556609297, 0.11142221498768307], ["2026-09-26", 0.22657, 0.23096, 0.21645, 0.22193, 549007090.8, 0.18849864551217935, 0.11252179493805438], ["2026-09-27", 0.22193, 0.23667, 0.2185, 0.22607, 841823073.9, 0.19207686974911464, 0.1136516278242429], ["2026-09-28", 0.22606, 0.22894, 0.19734, 0.20184, 1006691525.2, 0.1930066916777704, 0.1145291240647977], ["2026-09-29", 0.20186, 0.21612, 0.19105, 0.20342, 879969810.7, 0.19399843532750655, 0.11541361039251116], ["2026-09-30", 0.20342, 0.21236, 0.19937, 0.20288, 607027627.8, 0.19484429862964878, 0.11628392272691404], ["2026-10-01", 0.2029, 0.20832, 0.19608, 0.19974, 480787467.7, 0.19531055590301555, 0.11711433145599948], ["2026-10-02", 0.19975, 0.2089, 0.18815, 0.19583, 690533201.1, 0.195360026769395, 0.11789757193902436], ["2026-10-03", 0.19584, 0.20431, 0.19517, 0.20121, 278827863.3, 0.19591716707707169, 0.11872655132271567], ["2026-10-04", 0.20121, 0.2052, 0.19701, 0.204, 285695208.5, 0.19668696068877914, 0.11957504334935533], ["2026-10-05", 0.20398, 0.21097, 0.19924, 0.20771, 468575460.6, 0.19773677395651446, 0.12045200809214782], ["2026-10-06", 0.20771, 0.20822, 0.19831, 0.19962, 400750500.0, 0.1979161288177988, 0.12123974930516128], ["2026-10-07", 0.19962, 0.20063, 0.17843, 0.18556, 619454900.2, 0.1967393546446751, 0.1218797517996373], ["2026-10-08", 0.18556, 0.1887, 0.15996, 0.17261, 845357777.2, 0.19444132086899177, 0.12238453038869564], ["2026-10-09", 0.17263, 0.18361, 0.17173, 0.18256, 428100438.3, 0.19330976650051637, 0.12298329128035042], ["2026-10-10", 0.18256, 0.19085, 0.1821, 0.18939, 283684833.6, 0.1929364554052291, 0.1236440545511927], ["2026-10-11", 0.18939, 0.20315, 0.18833, 0.19939, 593495365.9, 0.19355107869996918, 0.12439774555068334], ["2026-10-12", 0.19939, 0.19973, 0.17924, 0.17957, 565840654.5, 0.19221954739521022, 0.12494672320689545], ["2026-10-13", 0.17956, 0.19193, 0.17406, 0.19119, 468927195.9, 0.19212149526233305, 0.12560586028941392], ["2026-10-14", 0.19118, 0.19514, 0.17884, 0.18182, 438190894.7, 0.19114040047544417, 0.12616520496315112], ["2026-10-15", 0.18182, 0.19664, 0.1686, 0.19558, 644441581.2, 0.19156321947778282, 0.1268558994411297]], "window": 90, "digits": 5, "marks": {"points": [[228, 0.19558]], "hlines": [[0.1812823482103123, "止损", "stop"], [0.23847295536906307, "目标", "target"]], "tlines": [], "boxes": []}}</script>
+<noscript>启用 JavaScript 后可查看交互图表。</noscript></div><div class="foot"><span>24h 额 117M</span><span>日 K 截至 10-15</span></div></article></div>
+<footer>stockscreen · 仅为形态筛选，不构成投资建议。</footer>
+</div><script>
+const links=[...document.querySelectorAll('nav a')];
+const secs=links.map(a=>document.getElementById(a.dataset.k));
+// 用实时位置判断：卡片开了 content-visibility，offsetTop 在未渲染时不准
+function sync(){let i=0;secs.forEach((s,k)=>{if(s.getBoundingClientRect().top<=120)i=k});
+links.forEach((a,k)=>a.classList.toggle('on',k===i))}
+addEventListener('scroll',sync,{passive:true});
+addEventListener('hashchange',sync);
+// 卡片是 content-visibility，渲染出来后页面高度会变，高度一变就重新对一次
+new ResizeObserver(sync).observe(document.body);
+sync();
+
+// Independent, offline SVG charts. Scan-day card metrics stay fixed while the viewport moves.
+document.querySelectorAll('.stock-chart').forEach((host, chartIndex) => {
+  const init = () => {
+    if (host.dataset.ready) return;
+    host.dataset.ready = 'true';
+    const data = JSON.parse(host.querySelector('.chart-data').textContent);
+    const rows = data.rows, marks = data.marks, total = rows.length;
+    const svg = host.querySelector('svg'), slider = host.querySelector('input');
+    const probe = host.querySelector('.chart-probe'), dates = host.querySelector('.chart-dates');
+    const clip = `stock-clip-${chartIndex}`, L = 12, T = 14, B = 230;
+    let width = Math.max(320,svg.clientWidth), R = width-64;
+    let size = data.window, start = total - size, drag = null, pending = 0;
+    const esc = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+    const fmt = v => v == null ? '—' : Number(v).toFixed(data.digits ?? 2);
+    const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+    function inspect(i) {
+      const r = rows[i];
+      probe.textContent = `${r[0]}  开 ${fmt(r[1])}  高 ${fmt(r[2])}  低 ${fmt(r[3])}  收 ${fmt(r[4])}  量 ${(r[5]/1e6).toFixed(2)}M  EMA20 ${fmt(r[6])}  EMA200 ${fmt(r[7])}`;
+    }
+    function draw() {
+      width=Math.max(320,svg.clientWidth);R=width-64;
+      svg.setAttribute('viewBox',`0 0 ${width} 334`);
+      size = clamp(Math.round(size), Math.min(20,total),total);
+      start = clamp(Math.round(start), 0, total-size);
+      const end = start+size-1, visible = rows.slice(start,end+1);
+      const vals = visible.flatMap(r => [r[2],r[3],r[6],r[7]]).filter(v=>v!=null);
+      marks.hlines.forEach(h => vals.push(h[0]));
+      marks.points.filter(p=>p[0]>=start&&p[0]<=end).forEach(p=>vals.push(p[1]));
+      marks.boxes.filter(b=>b[0]<=end&&b[2]>=start).forEach(b=>vals.push(b[1],b[3]));
+      const min = Math.min(...vals), max = Math.max(...vals), pad=(max-min)*.07||1;
+      const lo=min-pad, hi=max+pad;
+      const x = i => L+(i-start+.5)*(R-L)/size;
+      const y = v => T+(hi-v)/(hi-lo)*(B-T);
+      const cw = Math.max(1,(R-L)/size*.6), vmax=Math.max(...visible.map(r=>r[5]))||1;
+      let out = `<defs><clipPath id="${clip}"><rect x="${L}" y="0" width="${R-L}" height="307"/></clipPath></defs>`;
+      for(let k=0;k<5;k++) {
+        const v=lo+(hi-lo)*k/4, yy=y(v);
+        out+=`<line class="grid" x1="${L}" x2="${R}" y1="${yy}" y2="${yy}"/><text class="axis" x="${R+9}" y="${yy+4}">${fmt(v)}</text>`;
+      }
+      out+=`<g clip-path="url(#${clip})">`;
+      marks.boxes.forEach(([a,p,b,q,label])=>{
+        if(a>end||b<start) return;
+        const left=x(a)-cw, right=x(b)+cw;
+        out+=`<rect class="mark-box" x="${left}" y="${y(Math.max(p,q))}" width="${Math.max(right-left,1)}" height="${Math.max(Math.abs(y(q)-y(p)),1)}"><title>${esc(label)}</title></rect>`;
+      });
+      visible.forEach((r,k)=>{
+        const xx=x(start+k), cls=r[4]>=r[1]?'up':'down';
+        out+=`<g class="k ${cls}"><path d="M${xx} ${y(r[2])}V${y(r[3])}"/><rect x="${xx-cw/2}" y="${y(Math.max(r[1],r[4]))}" width="${cw}" height="${Math.max(Math.abs(y(r[1])-y(r[4])),1)}"/></g>`;
+        const vh=r[5]/vmax*45;
+        out+=`<g class="vol"><rect x="${xx-cw/2}" y="${299-vh}" width="${cw}" height="${Math.max(vh,.5)}"/></g>`;
+      });
+      [20,200].forEach((period,j)=>{
+        let path=''; visible.forEach((r,k)=>{if(r[6+j]!=null) path+=`${path?'L':'M'}${x(start+k)} ${y(r[6+j])}`});
+        out+=`<path class="ma ma${period}" d="${path}"/>`;
+      });
+      marks.hlines.forEach(([v,label,kind])=>{
+        const cls=kind==='stop'?'mark-stop':kind==='target'?'mark-target':'';
+        out+=`<line class="mark-h ${cls}" x1="${L}" x2="${R}" y1="${y(v)}" y2="${y(v)}"><title>${esc(label)} ${fmt(v)}</title></line>`;
+      });
+      marks.tlines.forEach(([a,p,b,q,label])=>{
+        out+=`<line class="mark-t" x1="${x(a)}" x2="${x(b)}" y1="${y(p)}" y2="${y(q)}"><title>${esc(label)}</title></line>`;
+      });
+      marks.points.forEach(([i,v],k)=>{
+        if(i<start||i>end)return;
+        out+=`<circle class="mark-p" cx="${x(i)}" cy="${y(v)}" r="4"><title>标记 ${k+1} · ${rows[i]?.[0]||''} · ${fmt(v)}</title></circle>`;
+      });
+      out+='</g>';
+      [0,Math.floor((size-1)/2),size-1].forEach((k,j)=>{
+        out+=`<text class="axis" x="${[L,(L+R)/2,R][j]}" y="324" text-anchor="${['start','middle','end'][j]}">${rows[start+k][0]}</text>`;
+      });
+      out+=`<line class="chart-crosshair" x1="0" x2="0" y1="${T}" y2="299" visibility="hidden"/>`;
+      svg.innerHTML=out;
+      slider.min=0;slider.max=total-size;slider.value=start;slider.disabled=total===size;
+      dates.textContent=`${rows[start][0]} — ${rows[end][0]} · ${size} 根日线`;
+      host.querySelectorAll('[data-window]').forEach(button=>{
+        const target=button.dataset.window==='all'?total:Number(button.dataset.window);
+        button.setAttribute('aria-pressed',String(target===size));
+      });
+      host.querySelector('[data-pan="-1"]').disabled=start===0;
+      host.querySelector('[data-pan="1"]').disabled=end===total-1;
+      inspect(end);
+    }
+    const pan = n => {start+=n;draw()};
+    const zoom = (n,anchor=.5) => {const at=start+size*anchor;size=n;size=clamp(Math.round(size),Math.min(20,total),total);start=at-size*anchor;draw()};
+    slider.addEventListener('input',()=>{start=Number(slider.value);draw()});
+    host.querySelectorAll('[data-pan]').forEach(b=>b.addEventListener('click',()=>pan(Number(b.dataset.pan)*Math.max(1,Math.round(size/4)))));
+    host.querySelector('[data-latest]').addEventListener('click',()=>{start=total-size;draw()});
+    host.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>zoom(b.dataset.window==='all'?total:Number(b.dataset.window),1)));
+    svg.addEventListener('pointerdown',e=>{
+      if(e.button!==0)return;
+      drag={x:e.clientX,start};svg.setPointerCapture(e.pointerId);svg.classList.add('dragging');
+    });
+    svg.addEventListener('pointermove',e=>{
+      const rect=svg.getBoundingClientRect();
+      if(drag) {
+        start=drag.start-(e.clientX-drag.x)/rect.width*width/(R-L)*size;
+        if(!pending)pending=requestAnimationFrame(()=>{pending=0;draw()});
+      } else {
+        const px=(e.clientX-rect.left)/rect.width*width;
+        const i=clamp(Math.floor((px-L)/(R-L)*size)+start,start,start+size-1);
+        inspect(i);
+        const cross=svg.querySelector('.chart-crosshair'),xx=L+(i-start+.5)*(R-L)/size;
+        cross.setAttribute('x1',xx);cross.setAttribute('x2',xx);cross.setAttribute('visibility','visible');
+      }
+    });
+    const release=()=>{drag=null;svg.classList.remove('dragging')};
+    svg.addEventListener('pointerup',release);svg.addEventListener('pointercancel',release);
+    svg.addEventListener('lostpointercapture',release);
+    svg.addEventListener('pointerleave',()=>{if(!drag){inspect(start+size-1);svg.querySelector('.chart-crosshair').setAttribute('visibility','hidden')}});
+    svg.addEventListener('wheel',e=>{
+      // Native vertical wheel scrolls the page; focus/click the chart to opt into zoom.
+      if(document.activeElement!==svg&&!e.ctrlKey&&Math.abs(e.deltaX)<=Math.abs(e.deltaY))return;
+      e.preventDefault();
+      if(Math.abs(e.deltaX)>Math.abs(e.deltaY))pan(Math.sign(e.deltaX)*Math.max(1,Math.round(size*.08)));
+      else {const rect=svg.getBoundingClientRect();zoom(size*(e.deltaY>0?1.15:.87),clamp((e.clientX-rect.left)/rect.width,0,1))}
+    },{passive:false});
+    svg.addEventListener('keydown',e=>{
+      const actions={ArrowLeft:()=>pan(-Math.max(1,Math.round(size*.1))),ArrowRight:()=>pan(Math.max(1,Math.round(size*.1))),'+':()=>zoom(size*.8),'-':()=>zoom(size*1.25),End:()=>{start=total-size;draw()}};
+      if(actions[e.key]){e.preventDefault();actions[e.key]()}
+    });
+    draw();
+    new ResizeObserver(()=>{if(Math.abs(Math.max(320,svg.clientWidth)-width)>.5)draw()}).observe(svg);
+  };
+  if('IntersectionObserver' in window) {
+    const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){init();observer.disconnect()}},{rootMargin:'400px'});
+    observer.observe(host);
+  } else init();
+});
+</script></body></html>
