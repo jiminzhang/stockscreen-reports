@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>币圈日线信号 2026-10-19 08:00</title><style>
+:root{color-scheme:light dark;--bg:#fbfbfa;--card:#fff;--line:#e4e2dd;--fg:#1f1e1c;
+--dim:#7c7973;--faint:#a5a29b;--up:#12a15c;--down:#dc4d3f;--grid:#eeece7;--accent:#c25a2c;
+--accent-bg:#f6ece6;--ma20:#e0913a;--ma60:#3b82c4;--ma200:#8d6bc4;--volc:#c9c6bf;
+--bar:rgba(251,251,250,.85)}
+@media (prefers-color-scheme:dark){:root{--bg:#17161a;--card:#201f24;--line:#33313a;
+--fg:#eceaf0;--dim:#9b97a4;--faint:#6d6a77;--grid:#2b2a31;--volc:#4a4854;
+--accent:#e08050;--accent-bg:#33241d;--bar:rgba(23,22,26,.85)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px 60px}
+
+.bar{position:sticky;top:0;z-index:20;background:var(--bar);border-bottom:1px solid var(--line);
+backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.bar-in{max-width:1240px;margin:0 auto;padding:9px 20px;display:flex;align-items:center;
+gap:8px 18px;flex-wrap:wrap}
+.brand{font-size:15px;font-weight:600;white-space:nowrap}
+.brand span{color:var(--dim);font-weight:400;margin-left:6px}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+nav a{padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--card);
+color:var(--dim);text-decoration:none;font-size:13px;white-space:nowrap;transition:.15s}
+nav a:hover{color:var(--fg)}
+nav a.on{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+nav a b{font-weight:600;margin-left:5px;font-variant-numeric:tabular-nums}
+
+h1{font-size:26px;margin:26px 0 6px;letter-spacing:-.01em}
+.meta{color:var(--dim);font-size:14px;margin:0 0 16px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--dim);font-size:12px;margin:0 0 4px}
+.legend i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin-right:5px}
+h2{font-size:18px;margin:34px 0 4px;scroll-margin-top:64px}
+h2 span{color:var(--dim);font-weight:400;font-size:14px}
+.desc{color:var(--dim);font-size:13px;margin:0 0 14px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px 10px;
+min-width:0;content-visibility:auto;contain-intrinsic-size:auto 640px}
+.head{display:flex;align-items:baseline;gap:8px}
+.sym{font-size:17px;font-weight:600;letter-spacing:.01em}
+.px,.chg,.cap{font-variant-numeric:tabular-nums}
+.chg{font-size:13px}.chg.p{color:var(--up)}.chg.n{color:var(--down)}
+.cap{margin-left:auto;font-size:13px;color:var(--dim)}
+.sub{font-size:12.5px;color:var(--dim);margin-top:1px;overflow:hidden;text-overflow:ellipsis;
+white-space:nowrap}
+.sub b{font-weight:500;color:var(--fg)}
+.sub em{font-style:normal;color:var(--faint)}
+.detail{margin:8px 0 0;font-size:13px;color:var(--dim)}
+.foot{margin-top:5px;font-size:11.5px;color:var(--faint);display:flex;gap:10px;flex-wrap:wrap}
+
+.chart{display:block;margin-top:8px;overflow:visible}
+.chart .grid{stroke:var(--grid);stroke-width:1}
+.chart .axis,.chart .tag{fill:var(--dim);font-size:9px;font-family:inherit}
+.chart .tag{fill:var(--accent)}
+.chart .k path{stroke-width:1;fill:none}
+.chart .k.up path{stroke:var(--up)}.chart .k.up rect{fill:var(--up)}
+.chart .k.down path{stroke:var(--down)}.chart .k.down rect{fill:var(--down)}
+.chart .vol rect{fill:var(--volc)}
+.chart .ma{fill:none;stroke-width:1.2;opacity:.9}
+.chart .ma20{stroke:var(--ma20)}.chart .ma200{stroke:var(--ma200)}
+.chart .mark-h{stroke:var(--accent);stroke-width:1.2;stroke-dasharray:4 3}
+.chart .mark-stop{stroke:var(--down)}.chart .mark-target{stroke:var(--up)}
+.chart .tag-stop{fill:var(--down)}.chart .tag-target{fill:var(--up)}
+.chart .mark-t{stroke:var(--accent);stroke-width:1.4}
+.chart .mark-p{fill:none;stroke:var(--accent);stroke-width:1.8}
+.chart .mark-box{fill:var(--accent);fill-opacity:.07;stroke:var(--accent);stroke-width:1.1;
+stroke-dasharray:3 2}
+.tracks{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
+.track{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tname{font-size:15px;font-weight:600}
+.tsec{font-size:12px;color:var(--faint);margin-left:7px}
+.tstat{display:flex;gap:12px;flex-wrap:wrap;margin:5px 0 9px;font-size:12px;color:var(--dim);
+font-variant-numeric:tabular-nums}
+.tstat b{color:var(--up);font-weight:600}
+.lead{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+.lead td{padding:3px 0;border-top:1px solid var(--line)}
+.lead td:first-child{font-weight:600;width:58px}
+.lead .nm{color:var(--dim);font-weight:400;width:auto;overflow:hidden;text-overflow:ellipsis;
+max-width:0;white-space:nowrap}
+.lead .r{text-align:right;color:var(--up);width:56px}
+.lead .r.n{color:var(--down)}
+.lead .v{text-align:right;color:var(--ma20);width:62px;white-space:nowrap}
+.lead .h{text-align:right;color:var(--faint);width:132px;white-space:nowrap}
+footer{margin-top:44px;color:var(--dim);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+.status-line{display:flex;align-items:center;gap:9px;margin:14px 0 10px;font-size:12px;color:var(--dim);flex-wrap:wrap}
+.status-badge{border-radius:5px;padding:3px 7px;background:var(--accent-bg);color:var(--accent);font-weight:600}
+.status-badge.buy{color:var(--up);background:color-mix(in srgb,var(--up) 10%,var(--card))}
+.scan-date{margin-left:auto;font-size:11px;color:var(--dim)}
+.key-stats{margin:0;overflow-x:auto;font-size:12px;line-height:1.7}
+.stats-row{display:flex;gap:16px;white-space:nowrap}
+.stats-row+.stats-row{margin-top:2px}
+.stats-row>div{display:flex;align-items:baseline;gap:5px}
+.key-stats dt{color:var(--dim)}
+.key-stats dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.key-stats small{font-size:inherit;font-weight:400;margin-left:3px}
+.key-stats .risk dd{color:var(--down)}
+.chart-tools{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chart-legend{display:flex;gap:12px;font-size:11px;color:var(--dim)}
+.chart-legend span:before{content:'';display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:5px}
+.ema20:before{background:var(--ma20)}.ema200:before{background:var(--ma200)}
+.window-buttons{display:flex;gap:3px}
+.stock-chart button{background:var(--card);color:var(--dim);font:inherit;font-size:11px;border:1px solid var(--line);border-radius:5px;padding:4px 8px;cursor:pointer;white-space:nowrap}
+.stock-chart button:hover,.stock-chart button[aria-pressed=true]{background:var(--accent-bg);color:var(--accent);border-color:var(--accent)}
+.stock-chart button:disabled{opacity:.4;cursor:default}
+.stock-chart :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chart-probe{font-size:10px;color:var(--dim);min-height:32px;margin-top:7px;font-variant-numeric:tabular-nums}
+.interactive{cursor:grab;touch-action:pan-y;user-select:none;margin-top:0;overflow:hidden}
+.interactive.dragging{cursor:grabbing}
+.interactive .axis{font-size:12px}.interactive .ma{stroke-width:1.7}
+.chart-crosshair{stroke:var(--dim);stroke-width:1;stroke-dasharray:3 4;pointer-events:none}
+.chart-navigation{display:flex;align-items:center;gap:8px;margin-top:6px}
+.chart-slider{flex:1;min-width:40px;accent-color:var(--accent);cursor:ew-resize}
+.chart-caption{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:10px;color:var(--dim);margin-top:5px}
+.chart-levels{display:flex;gap:5px 12px;flex-wrap:wrap;font-size:11px;color:var(--accent);padding:9px 0;border-bottom:1px solid var(--line)}
+.chart-levels .level-stop{color:var(--down)}.chart-levels .level-target{color:var(--up)}
+.extra-detail{margin-top:8px;font-size:11px;color:var(--dim)}.extra-detail summary{cursor:pointer}
+.extra-detail .detail{font-size:12px;margin:6px 0}.foot{margin-top:9px}
+@media(max-width:600px){.wrap{padding:0 10px 30px}.card{padding:12px}.key-stats{font-size:11px}.stats-row{gap:10px}.chart-caption span:last-child{display:none}.cap{font-size:11px}}
+
+.sym a{color:inherit;text-decoration:none}.sym a:hover{color:var(--accent)}
+.status-badge.minor{color:var(--dim);background:var(--grid)}
+.action{margin:8px 0 2px;font-size:13.5px}.action b{color:var(--accent);font-weight:600}
+.notes{color:var(--dim);font-size:13px;margin:0 0 14px;padding-left:18px}
+</style></head>
+<body>
+<div class="bar"><div class="bar-in">
+<div class="brand">币圈日线信号<span>2026-10-19 08:00</span></div><nav><a href="#ma20" data-k="ma20">📈 站上 20 日线<b>1</b></a></nav>
+</div></div>
+<div class="wrap">
+<h1>1 个信号</h1>
+<p class="meta">币安 USDT 永续 · 日 K 按北京时间 8 点切换，只用已收盘的日 K（盘中「突破中」另看 1h 收盘）
+· BTC 日线牛市（收盘 82,078，20 日线 82,596，50 日线 80,446）</p>
+<p class="legend">
+<span><i style="background:var(--ma20)"></i>EMA20</span>
+<span><i style="background:var(--ma200)"></i>EMA200</span>
+<span><i style="background:var(--accent)"></i>信号日</span>
+<span><i style="background:var(--down)"></i>止损</span>
+<span><i style="background:var(--up)"></i>目标</span>
+<span>拖动平移 · 点击图表后滚轮缩放</span></p>
+<h2 id="ma20">📈 站上 20 日线 <span>1 个</span></h2><ul class="notes"><li>主流币跌了一段后收回 20 日线。5 年回测 31 个币：60 天没涨的（重点）792 笔、每笔赚 0.23 倍止损距离，每年都正，但胜率不到四成、每笔平均只有 +0.6%——优势小，当小仓位补充；60 天已经涨了的（次要）和随便哪天买差不多，涨得越多越差。BTC 熊市里 60 天还在跌的不报。</li><li>仓位按止损算，一笔最多亏账户 1–2%；同一天报出几个就把仓位平分。</li></ul><div class="grid"><article class="card" data-symbol="NEARUSDT"><div class="head"><span class="sym"><a href="https://www.binance.com/zh-CN/futures/NEARUSDT" target="_blank" rel="noopener">NEAR</a></span><span class="px">5.0140</span><span class="cap">NEARUSDT 永续</span></div><div class="status-line"><span class="status-badge minor">次要</span><span>收回 20 日线上方：前一天收 4.8600（线下），现在 5.0140，20 日线 4.8991；次要原因：60 天已涨 +189%</span></div><p class="action">→ 现价 <b>5.0140</b> 进，不用等回调；到目标先出一半，剩下的拿到第 7 天按当时价平。</p><dl class="key-stats"><div class="stats-row"><div class="risk"><dt>止损</dt><dd>4.6229<small>(-7.8%)</small></dd></div><div class=""><dt>目标</dt><dd>6.1872<small>(+23.4%)</small></dd></div><div class=""><dt>止损口径</dt><dd>1h 收盘跌破</dd></div></div><div class="stats-row"><div class=""><dt>60 天涨跌</dt><dd>+189%</dd></div><div class=""><dt>在 20 日线下</dt><dd>1 天</dd></div></div></dl><div class="stock-chart">
+<div class="chart-tools"><div class="chart-legend"><span class="ema20">EMA20</span>
+<span class="ema200">EMA200</span></div><div class="window-buttons" role="group" aria-label="图表窗口">
+<button type="button" data-window="60">60日</button><button type="button" data-window="120">120日</button>
+<button type="button" data-window="250">250日</button><button type="button" data-window="all">全部</button>
+</div></div><div class="chart-probe" aria-label="所指交易日行情"></div>
+<svg class="chart interactive" viewBox="0 0 800 334" role="img" aria-label="日线图，可左右拖动；方向键平移，加减键缩放" tabindex="0"></svg>
+<div class="chart-navigation"><button type="button" data-pan="-1" aria-label="向前查看">←</button>
+<input class="chart-slider" type="range" aria-label="移动图表时间窗口" step="1">
+<button type="button" data-pan="1" aria-label="向后查看">→</button>
+<button type="button" data-latest>回到最新</button></div>
+<div class="chart-caption"><span class="chart-dates"></span><span>拖动平移 · 滚轮缩放</span></div>
+<script type="application/json" class="chart-data">{"rows": [["2026-03-04", 1.356, 1.414, 1.301, 1.31, 154781188.0, null, null], ["2026-03-05", 1.31, 1.328, 1.243, 1.272, 120534264.0, null, null], ["2026-03-06", 1.272, 1.299, 1.212, 1.225, 82103102.0, null, null], ["2026-03-07", 1.226, 1.247, 1.201, 1.214, 37476300.0, null, null], ["2026-03-08", 1.214, 1.255, 1.187, 1.21, 71477165.0, null, null], ["2026-03-09", 1.211, 1.282, 1.202, 1.233, 105540940.0, null, null], ["2026-03-10", 1.234, 1.332, 1.223, 1.284, 102841643.0, null, null], ["2026-03-11", 1.283, 1.323, 1.266, 1.298, 82536915.0, null, null], ["2026-03-12", 1.298, 1.37, 1.276, 1.367, 95469728.0, null, null], ["2026-03-13", 1.366, 1.422, 1.321, 1.334, 111926393.0, null, null], ["2026-03-14", 1.335, 1.34, 1.298, 1.323, 51968460.0, null, null], ["2026-03-15", 1.324, 1.377, 1.316, 1.348, 84348017.0, null, null], ["2026-03-16", 1.349, 1.509, 1.338, 1.49, 144345685.0, null, null], ["2026-03-17", 1.49, 1.509, 1.423, 1.452, 88490650.0, null, null], ["2026-03-18", 1.451, 1.469, 1.372, 1.385, 101208659.0, null, null], ["2026-03-19", 1.386, 1.396, 1.321, 1.334, 83804787.0, null, null], ["2026-03-20", 1.334, 1.365, 1.307, 1.315, 83491224.0, null, null], ["2026-03-21", 1.314, 1.332, 1.27, 1.28, 41720540.0, null, null], ["2026-03-22", 1.28, 1.306, 1.259, 1.273, 63166337.0, null, null], ["2026-03-23", 1.273, 1.332, 1.25, 1.31, 89069002.0, 1.3225234505607677, null], ["2026-03-24", 1.31, 1.329, 1.272, 1.29, 62422990.0, 1.31942597907879, null], ["2026-03-25", 1.291, 1.311, 1.264, 1.279, 65151040.0, 1.3155758858331907, null], ["2026-03-26", 1.278, 1.279, 1.201, 1.223, 62607839.0, 1.3067591348014582, null], ["2026-03-27", 1.223, 1.24, 1.168, 1.179, 68410224.0, 1.2945915981537004, null], ["2026-03-28", 1.179, 1.191, 1.16, 1.172, 38075341.0, 1.282916207853348, null], ["2026-03-29", 1.173, 1.177, 1.129, 1.164, 60818202.0, 1.2715908547244577, null], ["2026-03-30", 1.164, 1.224, 1.148, 1.16, 74115195.0, 1.2609631542745092, null], ["2026-03-31", 1.161, 1.203, 1.159, 1.188, 72488752.0, 1.2540142824388416, null], ["2026-04-01", 1.188, 1.229, 1.177, 1.19, 64156879.0, 1.2479176841113329, null], ["2026-04-02", 1.191, 1.205, 1.138, 1.162, 76735733.0, 1.2397350475293012, null], ["2026-04-03", 1.162, 1.228, 1.157, 1.208, 64945856.0, 1.2367126620503202, null], ["2026-04-04", 1.207, 1.287, 1.205, 1.254, 63161779.0, 1.2383590751883848, null], ["2026-04-05", 1.254, 1.27, 1.222, 1.246, 60868244.0, 1.2390867823133005, null], ["2026-04-06", 1.247, 1.302, 1.235, 1.248, 79138746.0, 1.2399356601882243, null], ["2026-04-07", 1.248, 1.34, 1.22, 1.309, 89106321.0, 1.2465132163607744, null], ["2026-04-08", 1.308, 1.391, 1.284, 1.329, 101387883.0, 1.254369100516891, null], ["2026-04-09", 1.329, 1.391, 1.319, 1.366, 97032505.0, 1.2650006147533777, null], ["2026-04-10", 1.366, 1.394, 1.343, 1.36, 83269358.0, 1.274048175253056, null], ["2026-04-11", 1.36, 1.424, 1.329, 1.402, 78814049.0, 1.2862340633241935, null], ["2026-04-12", 1.402, 1.407, 1.323, 1.345, 68726090.0, 1.2918308191980798, null], ["2026-04-13", 1.346, 1.42, 1.344, 1.417, 83343005.0, 1.3037516935601674, null], ["2026-04-14", 1.417, 1.438, 1.35, 1.359, 79411638.0, 1.3090134370306277, null], ["2026-04-15", 1.359, 1.421, 1.341, 1.409, 59715345.0, 1.3185359668372345, null], ["2026-04-16", 1.409, 1.442, 1.365, 1.431, 77408422.0, 1.3292468271384503, null], ["2026-04-17", 1.431, 1.441, 1.37, 1.406, 76977853.0, 1.3365566531252646, null], ["2026-04-18", 1.406, 1.421, 1.341, 1.343, 76395493.0, 1.3371703052085728, null], ["2026-04-19", 1.342, 1.388, 1.321, 1.325, 67167386.0, 1.336011228522042, null], ["2026-04-20", 1.325, 1.372, 1.324, 1.361, 57021207.0, 1.3383911115199427, null], ["2026-04-21", 1.361, 1.398, 1.348, 1.385, 63766549.0, 1.3428300532799482, null], ["2026-04-22", 1.385, 1.431, 1.376, 1.401, 54052305.0, 1.3483700482056675, null], ["2026-04-23", 1.401, 1.414, 1.369, 1.405, 66218116.0, 1.3537633769479849, null], ["2026-04-24", 1.405, 1.432, 1.395, 1.408, 42834914.0, 1.3589287696196053, null], ["2026-04-25", 1.407, 1.421, 1.387, 1.401, 25379637.0, 1.362935553465357, null], ["2026-04-26", 1.4, 1.413, 1.378, 1.394, 28351870.0, 1.3658940721829422, null], ["2026-04-27", 1.394, 1.413, 1.339, 1.364, 49578333.0, 1.3657136843559954, null], ["2026-04-28", 1.363, 1.366, 1.328, 1.347, 35535087.0, 1.3639314287030435, null], ["2026-04-29", 1.347, 1.374, 1.291, 1.327, 52959289.0, 1.3604141497789441, null], ["2026-04-30", 1.327, 1.341, 1.289, 1.297, 28229434.0, 1.3543747069428542, null], ["2026-05-01", 1.297, 1.319, 1.276, 1.288, 38886820.0, 1.34805330628163, null], ["2026-05-02", 1.287, 1.303, 1.276, 1.298, 26877810.0, 1.3432863247309985, null], ["2026-05-03", 1.298, 1.302, 1.266, 1.275, 30040056.0, 1.3367828652328082, null], ["2026-05-04", 1.275, 1.312, 1.244, 1.262, 80392605.0, 1.3296606875915884, null], ["2026-05-05", 1.261, 1.317, 1.256, 1.295, 49468854.0, 1.3263596697257227, null], ["2026-05-06", 1.295, 1.546, 1.287, 1.488, 198418310.0, 1.3417539868947015, null], ["2026-05-07", 1.487, 1.527, 1.451, 1.47, 105901016.0, 1.3539678929047299, null], ["2026-05-08", 1.469, 1.605, 1.454, 1.596, 108380496.0, 1.377018569770946, null], ["2026-05-09", 1.596, 1.617, 1.549, 1.566, 63881702.0, 1.3950168012213322, null], ["2026-05-10", 1.566, 1.631, 1.534, 1.563, 68676428.0, 1.4110152011050148, null], ["2026-05-11", 1.563, 1.574, 1.51, 1.547, 70007522.0, 1.4239661343331087, null], ["2026-05-12", 1.547, 1.65, 1.503, 1.607, 127622922.0, 1.4413979310632887, null], ["2026-05-13", 1.607, 1.69, 1.549, 1.575, 121152732.0, 1.4541219376286898, null], ["2026-05-14", 1.574, 1.633, 1.537, 1.572, 76712370.0, 1.4653484197592908, null], ["2026-05-15", 1.572, 1.593, 1.508, 1.543, 62789089.0, 1.472743808353644, null], ["2026-05-16", 1.544, 1.554, 1.477, 1.496, 47203922.0, 1.474958683748535, null], ["2026-05-17", 1.496, 1.559, 1.462, 1.508, 50450271.0, 1.4781054757724839, null], ["2026-05-18", 1.507, 1.628, 1.477, 1.625, 87764522.0, 1.4920954304608187, null], ["2026-05-19", 1.625, 1.687, 1.58, 1.602, 105329178.0, 1.5025625323216931, null], ["2026-05-20", 1.603, 1.731, 1.579, 1.702, 104132637.0, 1.5215565768624841, null], ["2026-05-21", 1.702, 1.966, 1.694, 1.926, 188752936.0, 1.5600749981136761, null], ["2026-05-22", 1.926, 2.336, 1.917, 2.101, 531036731.0, 1.6115916649599926, null], ["2026-05-23", 2.102, 2.473, 2.01, 2.451, 381351059.0, 1.691535315916184, null], ["2026-05-24", 2.45, 2.509, 2.325, 2.394, 276407056.0, 1.7584367144003568, null], ["2026-05-25", 2.393, 2.82, 2.332, 2.77, 308967796.0, 1.8547760749336561, null], ["2026-05-26", 2.769, 2.978, 2.523, 2.553, 385421439.0, 1.9212735916066412, null], ["2026-05-27", 2.552, 2.738, 2.45, 2.488, 262682044.0, 1.9752475352631516, null], ["2026-05-28", 2.487, 2.507, 2.269, 2.418, 227470168.0, 2.017414436666661, null], ["2026-05-29", 2.419, 2.632, 2.361, 2.378, 230676904.0, 2.0517559188888836, null], ["2026-05-30", 2.379, 2.443, 2.223, 2.248, 141416882.0, 2.0704458313756566, null], ["2026-05-31", 2.249, 2.357, 2.209, 2.32, 142726687.0, 2.0942128950541656, null], ["2026-06-01", 2.32, 2.71, 2.257, 2.637, 233106046.0, 2.145906905049007, null], ["2026-06-02", 2.637, 2.775, 2.454, 2.626, 279608072.0, 2.1916300569491014, null], ["2026-06-03", 2.627, 3.085, 2.626, 2.816, 297828102.0, 2.251093861049187, null], ["2026-06-04", 2.815, 2.853, 2.172, 2.2, 329756082.0, 2.2462277790445024, null], ["2026-06-05", 2.199, 2.303, 1.794, 1.968, 328835780.0, 2.2197298953259783, null], ["2026-06-06", 1.968, 2.006, 1.825, 1.858, 143427910.0, 2.1852794291044564, null], ["2026-06-07", 1.858, 2.101, 1.814, 2.058, 186500035.0, 2.173157578713556, null], ["2026-06-08", 2.057, 2.264, 2.011, 2.129, 167481280.0, 2.1689520950265506, null], ["2026-06-09", 2.129, 2.26, 2.032, 2.151, 169294137.0, 2.167242371690689, null], ["2026-06-10", 2.151, 2.204, 1.927, 1.968, 174522469.0, 2.148266907720147, null], ["2026-06-11", 1.969, 2.117, 1.948, 2.064, 142769836.0, 2.140241487937276, null], ["2026-06-12", 2.064, 2.153, 1.973, 2.009, 116320517.0, 2.1277422986099164, null], ["2026-06-13", 2.01, 2.186, 1.987, 2.127, 98979228.0, 2.12767160350421, null], ["2026-06-14", 2.127, 2.235, 2.061, 2.217, 86936159.0, 2.1361790698371426, null], ["2026-06-15", 2.216, 2.543, 2.208, 2.391, 144123020.0, 2.160447729852653, null], ["2026-06-16", 2.392, 2.562, 2.276, 2.306, 123991127.0, 2.174309850819067, null], ["2026-06-17", 2.307, 2.388, 2.172, 2.18, 111174616.0, 2.1748517697886793, null], ["2026-06-18", 2.181, 2.3, 2.126, 2.236, 113610929.0, 2.180675410761186, null], ["2026-06-19", 2.237, 2.254, 2.083, 2.185, 86328195.0, 2.1810872764029776, null], ["2026-06-20", 2.184, 2.203, 2.096, 2.192, 62768327.0, 2.182126583412218, null], ["2026-06-21", 2.192, 2.279, 2.087, 2.1, 74407542.0, 2.174305004039626, null], ["2026-06-22", 2.101, 2.198, 2.053, 2.066, 72023738.0, 2.1639902417501378, null], ["2026-06-23", 2.066, 2.069, 1.961, 1.98, 73117049.0, 2.146467361583458, null], ["2026-06-24", 1.981, 2.004, 1.857, 1.965, 75399301.0, 2.129184755718367, null], ["2026-06-25", 1.965, 1.976, 1.775, 1.833, 87645506.0, 2.100976683745189, null], ["2026-06-26", 1.833, 1.865, 1.751, 1.803, 100920023.0, 2.072597951959933, null], ["2026-06-27", 1.803, 1.928, 1.789, 1.867, 89566665.0, 2.053017194630416, null], ["2026-06-28", 1.867, 1.954, 1.801, 1.833, 77864818.0, 2.032063176094186, null], ["2026-06-29", 1.833, 1.916, 1.805, 1.865, 81113005.0, 2.016152397418549, null], ["2026-06-30", 1.865, 1.875, 1.757, 1.782, 62980610.0, 1.993852169092973, null], ["2026-07-01", 1.783, 1.877, 1.721, 1.806, 83246911.0, 1.9759614863222137, null], ["2026-07-02", 1.805, 1.955, 1.8, 1.942, 80501514.0, 1.9727270590534314, null], ["2026-07-03", 1.942, 2.115, 1.92, 2.043, 92699690.0, 1.9794197200959618, null], ["2026-07-04", 2.044, 2.056, 1.955, 1.997, 73003815.0, 1.981094032467775, null], ["2026-07-05", 1.998, 2.06, 1.921, 2.015, 55169602.0, 1.9843231722327488, null], ["2026-07-06", 2.015, 2.108, 1.952, 2.052, 87283358.0, 1.9907685844010585, null], ["2026-07-07", 2.052, 2.08, 1.966, 1.976, 74823832.0, 1.9893620525533386, null], ["2026-07-08", 1.976, 1.993, 1.841, 1.89, 81388187.0, 1.9798989999292111, null], ["2026-07-09", 1.89, 1.947, 1.873, 1.918, 48615199.0, 1.97400385707881, null], ["2026-07-10", 1.919, 1.967, 1.853, 1.891, 49397149.0, 1.9660987278332092, null], ["2026-07-11", 1.891, 1.924, 1.863, 1.866, 34329303.0, 1.956565515658618, null], ["2026-07-12", 1.867, 1.938, 1.854, 1.887, 40594762.0, 1.9499402284530352, null], ["2026-07-13", 1.888, 1.976, 1.856, 1.921, 85727943.0, 1.9471840162194127, null], ["2026-07-14", 1.921, 2.066, 1.913, 2.012, 85029453.0, 1.9533569670556592, null], ["2026-07-15", 2.012, 2.106, 1.996, 2.067, 66907332.0, 1.9641801130503584, null], ["2026-07-16", 2.066, 2.085, 1.957, 1.964, 67930572.0, 1.9641629594265149, null], ["2026-07-17", 1.963, 2.007, 1.871, 1.925, 66347988.0, 1.9604331537668467, null], ["2026-07-18", 1.925, 1.946, 1.892, 1.93, 33725257.0, 1.9575347581700042, null], ["2026-07-19", 1.93, 1.944, 1.895, 1.917, 32201979.0, 1.9536743050109562, null], ["2026-07-20", 1.916, 1.995, 1.897, 1.979, 57380089.0, 1.9560862759622937, null], ["2026-07-21", 1.979, 2.063, 1.914, 1.936, 74935278.0, 1.954173297299218, null], ["2026-07-22", 1.935, 1.952, 1.849, 1.867, 68005514.0, 1.9458710785088165, null], ["2026-07-23", 1.867, 1.905, 1.853, 1.883, 41706041.0, 1.939883356746072, null], ["2026-07-24", 1.883, 1.917, 1.783, 1.805, 59957395.0, 1.9270373227702557, null], ["2026-07-25", 1.805, 1.816, 1.776, 1.791, 26725912.0, 1.9140813872683267, null], ["2026-07-26", 1.791, 1.842, 1.784, 1.837, 26592117.0, 1.9067403027665812, null], ["2026-07-27", 1.837, 1.859, 1.679, 1.688, 72697428.0, 1.8859078929792878, null], ["2026-07-28", 1.689, 1.697, 1.619, 1.653, 57204332.0, 1.8637261888860224, null], ["2026-07-29", 1.653, 1.667, 1.569, 1.621, 70372556.0, 1.8406094089921154, null], ["2026-07-30", 1.62, 1.697, 1.604, 1.677, 49027751.0, 1.825027560516676, null], ["2026-07-31", 1.677, 1.708, 1.631, 1.664, 53744064.0, 1.8096916023722307, null], ["2026-08-01", 1.663, 1.686, 1.643, 1.673, 29980117.0, 1.7966733545272564, null], ["2026-08-02", 1.673, 1.735, 1.67, 1.716, 36030094.0, 1.788990177905613, null], ["2026-08-03", 1.715, 1.756, 1.692, 1.735, 32331022.0, 1.7838482562003166, null], ["2026-08-04", 1.736, 1.768, 1.717, 1.729, 28091131.0, 1.7786246127526675, null], ["2026-08-05", 1.729, 1.734, 1.677, 1.698, 39222499.0, 1.7709460782047943, null], ["2026-08-06", 1.699, 1.73, 1.65, 1.656, 45638794.0, 1.7599988326614806, null], ["2026-08-07", 1.656, 1.669, 1.574, 1.591, 53343410.0, 1.7439037057413396, null], ["2026-08-08", 1.59, 1.637, 1.583, 1.611, 32806886.0, 1.73124620995645, null], ["2026-08-09", 1.611, 1.648, 1.592, 1.598, 28805686.0, 1.7185560947225025, null], ["2026-08-10", 1.598, 1.669, 1.588, 1.6, 57339766.0, 1.7072650380822643, null], ["2026-08-11", 1.6, 1.621, 1.536, 1.62, 65220953.0, 1.6989540820744296, null], ["2026-08-12", 1.62, 1.683, 1.609, 1.642, 63855767.0, 1.6935298837816268, null], ["2026-08-13", 1.642, 1.68, 1.621, 1.64, 33027762.0, 1.688431799611948, null], ["2026-08-14", 1.64, 1.642, 1.581, 1.639, 30831459.0, 1.6837240091727148, null], ["2026-08-15", 1.64, 1.669, 1.615, 1.619, 22119421.0, 1.6775598178229325, null], ["2026-08-16", 1.618, 1.628, 1.582, 1.602, 18162579.0, 1.670363644696939, null], ["2026-08-17", 1.601, 1.656, 1.599, 1.637, 34780425.0, 1.667186154725802, null], ["2026-08-18", 1.636, 1.666, 1.583, 1.587, 44876376.0, 1.6595493780852495, null], ["2026-08-19", 1.588, 1.777, 1.562, 1.733, 84069667.0, 1.6665446754104638, null], ["2026-08-20", 1.732, 1.782, 1.702, 1.766, 68234177.0, 1.6760166110856578, null], ["2026-08-21", 1.765, 1.988, 1.758, 1.966, 144028696.0, 1.7036340766965474, null], ["2026-08-22", 1.966, 2.148, 1.588, 1.878, 172704935.0, 1.7202403551064, null], ["2026-08-23", 1.878, 2.039, 1.803, 2.016, 110701694.0, 1.748407940334362, null], ["2026-08-24", 2.015, 2.075, 1.926, 1.954, 122621051.0, 1.7679881364929941, null], ["2026-08-25", 1.954, 2.008, 1.827, 1.86, 76646240.0, 1.776751171112709, null], ["2026-08-26", 1.86, 1.908, 1.805, 1.899, 51992584.0, 1.7883939167210225, null], ["2026-08-27", 1.9, 1.961, 1.843, 1.926, 63105923.0, 1.801499257985687, null], ["2026-08-28", 1.927, 1.969, 1.797, 1.822, 67952147.0, 1.8034517096060978, null], ["2026-08-29", 1.822, 1.886, 1.778, 1.866, 35601070.0, 1.8094086896436123, null], ["2026-08-30", 1.867, 1.928, 1.786, 1.817, 57108009.0, 1.810131671582316, null], ["2026-08-31", 1.818, 1.932, 1.805, 1.92, 52854411.0, 1.8205953219078097, null], ["2026-09-01", 1.921, 2.045, 1.876, 1.885, 103140479.0, 1.8267291007737325, null], ["2026-09-02", 1.885, 1.897, 1.826, 1.887, 55829496.0, 1.8324691864143294, null], ["2026-09-03", 1.886, 2.019, 1.847, 1.954, 74805698.0, 1.8440435496129648, null], ["2026-09-04", 1.954, 2.198, 1.905, 2.172, 148600904.0, 1.8752774972688728, null], ["2026-09-05", 2.172, 2.288, 2.152, 2.19, 141548868.0, 1.9052510689575517, null], ["2026-09-06", 2.191, 2.499, 2.17, 2.439, 172736505.0, 1.9560843004854038, null], ["2026-09-07", 2.439, 2.446, 2.266, 2.307, 105563624.0, 1.9895048432963178, null], ["2026-09-08", 2.308, 2.44, 2.239, 2.318, 106498349.0, 2.020790096315716, null], ["2026-09-09", 2.318, 2.648, 2.253, 2.482, 190742395.0, 2.0647148490475526, null], ["2026-09-10", 2.483, 2.551, 2.357, 2.442, 141022964.0, 2.100646768185881, null], ["2026-09-11", 2.442, 2.727, 2.349, 2.364, 185535184.0, 2.125728028358654, null], ["2026-09-12", 2.364, 2.422, 2.326, 2.369, 72084264.0, 2.1488967875625917, null], ["2026-09-13", 2.369, 2.385, 2.269, 2.296, 63256398.0, 2.1629066173185354, null], ["2026-09-14", 2.297, 2.597, 2.276, 2.468, 99524137.0, 2.1919631299548654, null], ["2026-09-15", 2.467, 2.486, 2.296, 2.337, 90447716.0, 2.205776165197259, null], ["2026-09-16", 2.336, 2.633, 2.294, 2.619, 127041299.0, 2.2451308161308536, null], ["2026-09-17", 2.619, 3.209, 2.587, 3.146, 219057709.0, 2.3309278812612484, null], ["2026-09-18", 3.146, 3.836, 3.069, 3.763, 321493474.0, 2.4673157020935106, null], ["2026-09-19", 3.763, 3.917, 3.403, 3.588, 166372070.0, 2.5740475399893668, 1.8426842967248904], ["2026-09-20", 3.589, 4.307, 3.424, 4.166, 230657101.0, 2.7256620599903796, 1.8658018659117075], ["2026-09-21", 4.166, 4.459, 3.918, 4.269, 256134664.0, 2.8726466257055816, 1.8897142851563673], ["2026-09-22", 4.269, 4.664, 4.204, 4.423, 230860727.0, 3.0202993280193358, 1.9149211081896373], ["2026-09-23", 4.423, 4.814, 4.022, 4.331, 299054848.0, 3.1451279634460656, 1.9389616941778003], ["2026-09-24", 4.332, 4.84, 4.06, 4.59, 230282474.0, 3.28273482407025, 1.9653401847829963], ["2026-09-25", 4.59, 5.216, 4.428, 4.948, 211893266.0, 3.441331507492131, 1.9950183918995834], ["2026-09-26", 4.948, 5.05, 4.727, 5.036, 105952089.0, 3.593204697254785, 2.025276915363269], ["2026-09-27", 5.037, 5.58, 5.002, 5.386, 175117807.0, 3.763947107040044, 2.058716946056172], ["2026-09-28", 5.385, 5.423, 4.661, 4.819, 189599211.0, 3.864428334940992, 2.0861824490804888], ["2026-09-29", 4.82, 5.168, 4.545, 4.883, 168738550.0, 3.961435160184707, 2.114011479437897], ["2026-09-30", 4.883, 5.508, 4.83, 5.339, 175939012.0, 4.0926318115956875, 2.1461009174534404], ["2026-10-01", 5.339, 5.527, 4.738, 4.803, 209616575.0, 4.1602859247770505, 2.1725377242449486], ["2026-10-02", 4.804, 5.064, 4.589, 4.69, 136615181.0, 4.210734884322093, 2.1975871001231084], ["2026-10-03", 4.69, 4.876, 4.605, 4.832, 63625292.0, 4.269902990577132, 2.2238001638034754], ["2026-10-04", 4.832, 5.054, 4.731, 4.914, 85647672.0, 4.33124556290312, 2.2505683213775702], ["2026-10-05", 4.913, 5.32, 4.805, 5.293, 142637823.0, 4.422841223579013, 2.2808412734036643], ["2026-10-06", 5.293, 5.37, 5.02, 5.064, 95344315.0, 4.483903964190536, 2.3085343950613395], ["2026-10-07", 5.064, 5.452, 4.83, 5.334, 179591089.0, 4.564865491410485, 2.3386385304338635], ["2026-10-08", 5.333, 5.632, 4.3, 4.462, 292300470.0, 4.55506877794282, 2.359766505255417], ["2026-10-09", 4.462, 4.979, 4.441, 4.883, 145710853.0, 4.586300322900646, 2.3848733061981493], ["2026-10-10", 4.882, 5.439, 4.866, 5.294, 127958309.0, 4.653700292148204, 2.4138198404648343], ["2026-10-11", 5.294, 5.95, 5.165, 5.895, 167765140.0, 4.771919311943613, 2.4484584490174233], ["2026-10-12", 5.894, 6.024, 5.001, 5.089, 214907877.0, 4.802117472710888, 2.474732494300832], ["2026-10-13", 5.09, 5.363, 4.887, 5.038, 192050336.0, 4.824582475309851, 2.5002376436112717], ["2026-10-14", 5.038, 5.182, 4.767, 4.883, 160599758.0, 4.830146049089866, 2.523946721784294], ["2026-10-15", 4.882, 5.439, 4.521, 5.261, 210942002.0, 4.871179758700355, 2.551181082761565], ["2026-10-16", 5.261, 5.391, 4.92, 5.067, 154240139.0, 4.889829305490797, 2.576214106813689], ["2026-10-17", 5.067, 5.198, 4.77, 4.86, 95320626.0, 4.886988419253578, 2.5989383445568364], ["2026-10-18", 4.86, 5.063, 4.616, 5.014, 125667609.0, 4.899084760277047, 2.6229688087901017]], "window": 90, "digits": 4, "marks": {"points": [[228, 5.014]], "hlines": [[4.622916970434288, "止损", "stop"], [6.187249088697137, "目标", "target"]], "tlines": [], "boxes": []}}</script>
+<noscript>启用 JavaScript 后可查看交互图表。</noscript></div><div class="foot"><span>24h 额 611M</span><span>日 K 截至 10-18</span></div></article></div>
+<footer>stockscreen · 仅为形态筛选，不构成投资建议。</footer>
+</div><script>
+const links=[...document.querySelectorAll('nav a')];
+const secs=links.map(a=>document.getElementById(a.dataset.k));
+// 用实时位置判断：卡片开了 content-visibility，offsetTop 在未渲染时不准
+function sync(){let i=0;secs.forEach((s,k)=>{if(s.getBoundingClientRect().top<=120)i=k});
+links.forEach((a,k)=>a.classList.toggle('on',k===i))}
+addEventListener('scroll',sync,{passive:true});
+addEventListener('hashchange',sync);
+// 卡片是 content-visibility，渲染出来后页面高度会变，高度一变就重新对一次
+new ResizeObserver(sync).observe(document.body);
+sync();
+
+// Independent, offline SVG charts. Scan-day card metrics stay fixed while the viewport moves.
+document.querySelectorAll('.stock-chart').forEach((host, chartIndex) => {
+  const init = () => {
+    if (host.dataset.ready) return;
+    host.dataset.ready = 'true';
+    const data = JSON.parse(host.querySelector('.chart-data').textContent);
+    const rows = data.rows, marks = data.marks, total = rows.length;
+    const svg = host.querySelector('svg'), slider = host.querySelector('input');
+    const probe = host.querySelector('.chart-probe'), dates = host.querySelector('.chart-dates');
+    const clip = `stock-clip-${chartIndex}`, L = 12, T = 14, B = 230;
+    let width = Math.max(320,svg.clientWidth), R = width-64;
+    let size = data.window, start = total - size, drag = null, pending = 0;
+    const esc = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+    const fmt = v => v == null ? '—' : Number(v).toFixed(data.digits ?? 2);
+    const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+    function inspect(i) {
+      const r = rows[i];
+      probe.textContent = `${r[0]}  开 ${fmt(r[1])}  高 ${fmt(r[2])}  低 ${fmt(r[3])}  收 ${fmt(r[4])}  量 ${(r[5]/1e6).toFixed(2)}M  EMA20 ${fmt(r[6])}  EMA200 ${fmt(r[7])}`;
+    }
+    function draw() {
+      width=Math.max(320,svg.clientWidth);R=width-64;
+      svg.setAttribute('viewBox',`0 0 ${width} 334`);
+      size = clamp(Math.round(size), Math.min(20,total),total);
+      start = clamp(Math.round(start), 0, total-size);
+      const end = start+size-1, visible = rows.slice(start,end+1);
+      const vals = visible.flatMap(r => [r[2],r[3],r[6],r[7]]).filter(v=>v!=null);
+      marks.hlines.forEach(h => vals.push(h[0]));
+      marks.points.filter(p=>p[0]>=start&&p[0]<=end).forEach(p=>vals.push(p[1]));
+      marks.boxes.filter(b=>b[0]<=end&&b[2]>=start).forEach(b=>vals.push(b[1],b[3]));
+      const min = Math.min(...vals), max = Math.max(...vals), pad=(max-min)*.07||1;
+      const lo=min-pad, hi=max+pad;
+      const x = i => L+(i-start+.5)*(R-L)/size;
+      const y = v => T+(hi-v)/(hi-lo)*(B-T);
+      const cw = Math.max(1,(R-L)/size*.6), vmax=Math.max(...visible.map(r=>r[5]))||1;
+      let out = `<defs><clipPath id="${clip}"><rect x="${L}" y="0" width="${R-L}" height="307"/></clipPath></defs>`;
+      for(let k=0;k<5;k++) {
+        const v=lo+(hi-lo)*k/4, yy=y(v);
+        out+=`<line class="grid" x1="${L}" x2="${R}" y1="${yy}" y2="${yy}"/><text class="axis" x="${R+9}" y="${yy+4}">${fmt(v)}</text>`;
+      }
+      out+=`<g clip-path="url(#${clip})">`;
+      marks.boxes.forEach(([a,p,b,q,label])=>{
+        if(a>end||b<start) return;
+        const left=x(a)-cw, right=x(b)+cw;
+        out+=`<rect class="mark-box" x="${left}" y="${y(Math.max(p,q))}" width="${Math.max(right-left,1)}" height="${Math.max(Math.abs(y(q)-y(p)),1)}"><title>${esc(label)}</title></rect>`;
+      });
+      visible.forEach((r,k)=>{
+        const xx=x(start+k), cls=r[4]>=r[1]?'up':'down';
+        out+=`<g class="k ${cls}"><path d="M${xx} ${y(r[2])}V${y(r[3])}"/><rect x="${xx-cw/2}" y="${y(Math.max(r[1],r[4]))}" width="${cw}" height="${Math.max(Math.abs(y(r[1])-y(r[4])),1)}"/></g>`;
+        const vh=r[5]/vmax*45;
+        out+=`<g class="vol"><rect x="${xx-cw/2}" y="${299-vh}" width="${cw}" height="${Math.max(vh,.5)}"/></g>`;
+      });
+      [20,200].forEach((period,j)=>{
+        let path=''; visible.forEach((r,k)=>{if(r[6+j]!=null) path+=`${path?'L':'M'}${x(start+k)} ${y(r[6+j])}`});
+        out+=`<path class="ma ma${period}" d="${path}"/>`;
+      });
+      marks.hlines.forEach(([v,label,kind])=>{
+        const cls=kind==='stop'?'mark-stop':kind==='target'?'mark-target':'';
+        out+=`<line class="mark-h ${cls}" x1="${L}" x2="${R}" y1="${y(v)}" y2="${y(v)}"><title>${esc(label)} ${fmt(v)}</title></line>`;
+      });
+      marks.tlines.forEach(([a,p,b,q,label])=>{
+        out+=`<line class="mark-t" x1="${x(a)}" x2="${x(b)}" y1="${y(p)}" y2="${y(q)}"><title>${esc(label)}</title></line>`;
+      });
+      marks.points.forEach(([i,v],k)=>{
+        if(i<start||i>end)return;
+        out+=`<circle class="mark-p" cx="${x(i)}" cy="${y(v)}" r="4"><title>标记 ${k+1} · ${rows[i]?.[0]||''} · ${fmt(v)}</title></circle>`;
+      });
+      out+='</g>';
+      [0,Math.floor((size-1)/2),size-1].forEach((k,j)=>{
+        out+=`<text class="axis" x="${[L,(L+R)/2,R][j]}" y="324" text-anchor="${['start','middle','end'][j]}">${rows[start+k][0]}</text>`;
+      });
+      out+=`<line class="chart-crosshair" x1="0" x2="0" y1="${T}" y2="299" visibility="hidden"/>`;
+      svg.innerHTML=out;
+      slider.min=0;slider.max=total-size;slider.value=start;slider.disabled=total===size;
+      dates.textContent=`${rows[start][0]} — ${rows[end][0]} · ${size} 根日线`;
+      host.querySelectorAll('[data-window]').forEach(button=>{
+        const target=button.dataset.window==='all'?total:Number(button.dataset.window);
+        button.setAttribute('aria-pressed',String(target===size));
+      });
+      host.querySelector('[data-pan="-1"]').disabled=start===0;
+      host.querySelector('[data-pan="1"]').disabled=end===total-1;
+      inspect(end);
+    }
+    const pan = n => {start+=n;draw()};
+    const zoom = (n,anchor=.5) => {const at=start+size*anchor;size=n;size=clamp(Math.round(size),Math.min(20,total),total);start=at-size*anchor;draw()};
+    slider.addEventListener('input',()=>{start=Number(slider.value);draw()});
+    host.querySelectorAll('[data-pan]').forEach(b=>b.addEventListener('click',()=>pan(Number(b.dataset.pan)*Math.max(1,Math.round(size/4)))));
+    host.querySelector('[data-latest]').addEventListener('click',()=>{start=total-size;draw()});
+    host.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>zoom(b.dataset.window==='all'?total:Number(b.dataset.window),1)));
+    svg.addEventListener('pointerdown',e=>{
+      if(e.button!==0)return;
+      drag={x:e.clientX,start};svg.setPointerCapture(e.pointerId);svg.classList.add('dragging');
+    });
+    svg.addEventListener('pointermove',e=>{
+      const rect=svg.getBoundingClientRect();
+      if(drag) {
+        start=drag.start-(e.clientX-drag.x)/rect.width*width/(R-L)*size;
+        if(!pending)pending=requestAnimationFrame(()=>{pending=0;draw()});
+      } else {
+        const px=(e.clientX-rect.left)/rect.width*width;
+        const i=clamp(Math.floor((px-L)/(R-L)*size)+start,start,start+size-1);
+        inspect(i);
+        const cross=svg.querySelector('.chart-crosshair'),xx=L+(i-start+.5)*(R-L)/size;
+        cross.setAttribute('x1',xx);cross.setAttribute('x2',xx);cross.setAttribute('visibility','visible');
+      }
+    });
+    const release=()=>{drag=null;svg.classList.remove('dragging')};
+    svg.addEventListener('pointerup',release);svg.addEventListener('pointercancel',release);
+    svg.addEventListener('lostpointercapture',release);
+    svg.addEventListener('pointerleave',()=>{if(!drag){inspect(start+size-1);svg.querySelector('.chart-crosshair').setAttribute('visibility','hidden')}});
+    svg.addEventListener('wheel',e=>{
+      // Native vertical wheel scrolls the page; focus/click the chart to opt into zoom.
+      if(document.activeElement!==svg&&!e.ctrlKey&&Math.abs(e.deltaX)<=Math.abs(e.deltaY))return;
+      e.preventDefault();
+      if(Math.abs(e.deltaX)>Math.abs(e.deltaY))pan(Math.sign(e.deltaX)*Math.max(1,Math.round(size*.08)));
+      else {const rect=svg.getBoundingClientRect();zoom(size*(e.deltaY>0?1.15:.87),clamp((e.clientX-rect.left)/rect.width,0,1))}
+    },{passive:false});
+    svg.addEventListener('keydown',e=>{
+      const actions={ArrowLeft:()=>pan(-Math.max(1,Math.round(size*.1))),ArrowRight:()=>pan(Math.max(1,Math.round(size*.1))),'+':()=>zoom(size*.8),'-':()=>zoom(size*1.25),End:()=>{start=total-size;draw()}};
+      if(actions[e.key]){e.preventDefault();actions[e.key]()}
+    });
+    draw();
+    new ResizeObserver(()=>{if(Math.abs(Math.max(320,svg.clientWidth)-width)>.5)draw()}).observe(svg);
+  };
+  if('IntersectionObserver' in window) {
+    const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){init();observer.disconnect()}},{rootMargin:'400px'});
+    observer.observe(host);
+  } else init();
+});
+</script></body></html>
